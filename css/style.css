@@ -83,6 +83,15 @@ hr{
 	margin-bottom:-5px;
 }
 
+.dotless{
+    list-style-type: none;
+}
+
+.dotless ul{
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
 @media screen and (max-width: 800px) {
     header{
         padding-left: 2px;
