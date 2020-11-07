@@ -15,6 +15,32 @@ header{
     border-radius: 10px;
 }
 
+#contact{
+    background-color: rgb(255,255,255,0.1);
+    margin: 10px;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: auto;
+    list-style-type: none;
+}
+
+#contact ul{
+    margin: auto;
+    max-width: 20em;
+    list-style: none;
+}
+
+#contact a:link{
+    color: greenyellow;
+}
+#contact a:visited{
+    color: greenyellow;
+}
+#contact a:hover{
+    color: red;
+}
+
 #content{
     background: linear-gradient(rgba(60, 59, 63, 0), rgba(60, 59, 63, 0.5) 20%);
     padding-top: 50px;
