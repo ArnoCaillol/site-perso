@@ -31,10 +31,7 @@ header{
     list-style: none;
 }
 
-#contact a:link{
-    color: greenyellow;
-}
-#contact a:visited{
+#contact a:link, a:visited{
     color: greenyellow;
 }
 #contact a:hover{
@@ -44,16 +41,7 @@ header{
 #content{
     background: linear-gradient(rgba(60, 59, 63, 0), rgba(60, 59, 63, 0.5) 20%);
     padding-top: 50px;
-    padding-bottom: 50px;
-    border-radius: 10px;
-}
-
-footer{
-    text-align: center;
-    background-color: #3c3b3f;
-    font-size: 0.90rem;
-    margin-top: 10px;
-    padding: 5px;
+    padding-bottom: 25px;
     border-radius: 10px;
 }
 
