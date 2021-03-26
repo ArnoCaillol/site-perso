@@ -1,5 +1,5 @@
 body {
-    font-family: "Liberation Sans";
+    font-family: "Liberation Sans", "Arial";
     color: white;
     background: linear-gradient(to bottom right,#3c3b3f, #536976, #292e49, #bbd2c5);
 }
