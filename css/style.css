@@ -9,7 +9,7 @@ body {
     margin: 10px;
 }
 header{
-    background: linear-gradient(rgba(60, 59, 63, 1), rgba(60, 59, 63, 0));
+    background: linear-gradient(rgba(37, 37, 40, 1), rgba(37, 37, 40, 0));
     padding-top: 25px;
     border-radius: 10px;
 }
@@ -34,7 +34,7 @@ header{
     color: red;
 }
 #content{
-    background: linear-gradient(rgba(60, 59, 63, 0), rgba(60, 59, 63, 0.5) 20%);
+    background: linear-gradient(rgba(37, 37, 40, 0), rgba(37, 37, 40, 0.8) 20%);
     padding-top: 50px;
     padding-bottom: 25px;
     border-radius: 10px;
