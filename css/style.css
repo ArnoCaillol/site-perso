@@ -1,233 +1,326 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Liberation Sans", "Helvetica", "Arial";
     color: white;
-    background: linear-gradient(to bottom right,#3c3b3f, #536976, #292e49, #bbd2c5);
+    background: linear-gradient(to bottom right, #3c3b3f, #536976, #292e49, #bbd2c5);
+    margin-top: 0;
+    margin-bottom: 0;
 }
-#photo{
+
+#photo {
     max-width: 150px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px;
 }
-header{
-    background: linear-gradient(rgba(37, 37, 40, 1), rgba(37, 37, 40, 0));
-    padding-top: 25px;
-    border-radius: 10px;
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    background-color: rgba(37, 37, 37, 1);
 }
-#contact{
-    background-color: rgb(255,255,255,0.1);
-    margin: 10px;
-    border-radius: 10px;
+
+nav a {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a:visited {
+    color: white;
+}
+
+header {
+    background: linear-gradient(rgba(37, 37, 40, 1), rgba(37, 37, 40, 0.9));
+    padding-top: 25px;
+}
+
+#contact {
+    background-color: rgb(255, 255, 255, 0.1);
+    width: 100%;
     padding-top: 2px;
     padding-bottom: 2px;
-    margin: auto;
     list-style-type: none;
 }
-#contact ul{
+
+#contact ul {
     margin: auto;
     max-width: 20em;
-    list-style: none;
 }
-#contact a:link, a:visited{
+
+#contact a:link, a:visited {
     color: greenyellow;
 }
-#contact a:hover{
+
+#contact a:hover {
     color: red;
 }
-#content{
-    background: linear-gradient(rgba(37, 37, 40, 0), rgba(37, 37, 40, 0.8) 20%);
+
+#content {
+    background-color: rgba(37, 37, 40, 0.9);
     padding-top: 50px;
-    padding-bottom: 25px;
-    border-radius: 10px;
+    padding-bottom: 25vh;
+    margin-bottom: 0;
 }
-section{
+
+section {
     display: inline-block;
     vertical-align: top;
     width: 30.3%;
-    margin: 0.4rem;
+    margin: 0.25vw;
 }
-p{
+
+ul {
+    list-style: none;
+}
+
+p {
     text-align: justify;
     text-justify: inter-word;
 }
-h1,h2{
+
+h1, h2 {
     text-align: center;
 }
-h4{
+
+h2 {
+    padding-top: 50px;
+}
+
+h4 {
     margin-block-start: 1em;
     margin-block-end: 0.5em;
 }
-hr{
-    margin:0;
+
+hr {
+    margin: 0;
+    height: 2px;
     background-color: white;
-    border: 2px solid white;
     border-radius: 2px;
 }
-.max{
-    background-color:grey;
+
+.max {
+    background-color: grey;
     border-radius: 2px;
 }
-.icon{
-	max-height: 1.3em;
-	max-width: 1.3em;
-	margin-bottom:-3px;
+
+.icon {
+    max-height: 1.3em;
+    max-width: 1.3em;
+    margin-bottom: -3px;
 }
+
 @media screen and (max-width: 800px) {
-    header{
+    header {
         padding-left: 2px;
         padding-right: 2px;
     }
-    #content{
+    #content {
         padding-left: 5px;
         padding-right: 5px;
     }
-    #photo{
-	display: block;
-	margin-left: auto;
-  	margin-right: auto;
-  	width: 50%;
+    #photo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
-    section{
+    section {
         display: block;
         width: 97%;
     }
 }
+
 @media screen and (min-width: 800px) {
-    header{
+    header {
         padding-left: 25px;
         padding-right: 25px;
     }
-    #content{
+    #content {
         padding-left: 50px;
         padding-right: 50px;
     }
-
-    #photo{
-	float: left;
-	margin: 20px;
+    #photo {
+        float: left;
+        margin: 20px;
     }
 }
+
 @media screen and (min-width: 1000px) {
     body {
-	margin-right: 100px;
-	margin-left: 100px;
+        margin-right: 100px;
+        margin-left: 100px;
     }
-    header{
+    nav {
+        display: flex;
+        left: 0;
+        width: 135px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header {
         padding-left: 50px;
         padding-right: 50px;
     }
-    #content{
+    #content {
         padding-left: 150px;
         padding-right: 150px;
     }
 }
+
 @media screen and (min-width: 1200px) {
     body {
-	margin-right: 150px;
-	margin-left: 150px;
+        margin-right: 150px;
+        margin-left: 150px;
     }
-    header{
+    nav {
+        left: 150px;
+        width: 145px;
+    }
+    header {
         padding-left: 150px;
         padding-right: 150px;
     }
-    #content{
+    #content {
         padding-left: 200px;
         padding-right: 200px;
     }
 }
+
 @media screen and (min-width: 1600px) {
     body {
-	margin-right: 200px;
-	margin-left: 200px;
+        margin-right: 200px;
+        margin-left: 200px;
     }
-    header{
+    nav {
+        left: 200px;
+        width: 195px;
+    }
+    header {
         padding-left: 200px;
         padding-right: 200px;
     }
-    #content{
+    #content {
         padding-left: 250px;
         padding-right: 250px;
     }
 }
+
 @media screen and (min-width: 1900px) {
     body {
-	margin-right: 250px;
-	margin-left: 250px;
+        margin-right: 250px;
+        margin-left: 250px;
     }
-    header{
+    nav {
+        left: 250px;
+    }
+    header {
         padding-left: 300px;
         padding-right: 300px;
     }
-    #content{
+    #content {
         padding-left: 300px;
         padding-right: 300px;
     }
 }
+
 @media screen and (min-width: 2100px) {
     body {
-	margin-right: 300px;
-	margin-left: 300px;
+        margin-right: 300px;
+        margin-left: 300px;
     }
-    header{
+    nav {
+        left: 300px;
+    }
+    header {
         padding-left: 350px;
         padding-right: 350px;
     }
-    #content{
+    #content {
         padding-left: 350px;
         padding-right: 350px;
     }
 }
+
 @media screen and (min-width: 2500px) {
     body {
-	margin-right: 500px;
-	margin-left: 500px;
+        margin-right: 500px;
+        margin-left: 500px;
     }
-    header{
+    nav {
+        left: 500px;
+        width: 295px;
+    }
+    header {
         padding-left: 350px;
         padding-right: 350px;
     }
-    #content{
+    #content {
         padding-left: 350px;
         padding-right: 350px;
     }
 }
+
 @media screen and (min-width: 3000px) {
     body {
-	margin-right: 600px;
-	margin-left: 600px;
+        margin-right: 600px;
+        margin-left: 600px;
     }
-    header{
+    nav {
+        left: 600px;
+    }
+    header {
         padding-left: 400px;
         padding-right: 400px;
     }
-    #content{
+    #content {
         padding-left: 400px;
         padding-right: 400px;
     }
 }
+
 @media screen and (min-width: 3500px) {
     body {
-	margin-right: 800px;
-	margin-left: 800px;
+        margin-right: 800px;
+        margin-left: 800px;
     }
-    header{
+    nav {
+        left: 800px;
+    }
+    header {
         padding-left: 400px;
         padding-right: 400px;
     }
-    #content{
+    #content {
         padding-left: 400px;
         padding-right: 400px;
     }
 }
+
 @media screen and (min-width: 4000px) {
     body {
-	margin-right: 1000px;
-	margin-left: 1000px;
+        margin-right: 1000px;
+        margin-left: 1000px;
     }
-    header{
+    nav {
+        left: 1000px;
+    }
+    header {
         padding-left: 500px;
         padding-right: 500px;
     }
-    #content{
+    #content {
         padding-left: 500px;
         padding-right: 500px;
     }
