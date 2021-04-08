@@ -1,10 +1,22 @@
+:root {
+    --dark-bg: rgba(37, 37, 37, 0.9);
+    --light-bg: rgba(255, 255, 255, 0.9);
+    --dark-nav: rgba(37, 37, 37, 1);
+    --light-nav: rgba(255, 255, 255, 1);
+    --light-fg: white;
+    --dark-fg: black;
+    --contact: rgba(255, 255, 255, 0.1);
+    --hr: white;
+    --max: grey;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: "Liberation Sans", "Helvetica", "Arial";
-    color: white;
+    color: var(--light-fg);
     background: linear-gradient(to bottom right, #3c3b3f, #536976, #292e49, #bbd2c5);
     margin-top: 0;
     margin-bottom: 0;
@@ -20,11 +32,11 @@ nav {
     display: none;
     position: fixed;
     top: 0;
-    background-color: rgba(37, 37, 37, 1);
+    background-color: var(--dark-nav);
 }
 
 nav a {
-    color: white;
+    color: var(--light-fg);
     width: 100%;
     text-align: center;
     padding-top: 14px;
@@ -33,20 +45,20 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--light-bg);
 }
 
 nav a:visited {
-    color: white;
+    color: var(--light-fg);
 }
 
 header {
-    background: linear-gradient(rgba(37, 37, 40, 1), rgba(37, 37, 40, 0.9));
+    background-color: var(--dark-bg);
     padding-top: 25px;
 }
 
 #contact {
-    background-color: rgb(255, 255, 255, 0.1);
+    background-color: var(--contact);
     width: 100%;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -67,7 +79,7 @@ header {
 }
 
 #content {
-    background-color: rgba(37, 37, 40, 0.9);
+    background-color: var(--dark-bg);
     padding-top: 50px;
     padding-bottom: 25vh;
     margin-bottom: 0;
@@ -105,12 +117,12 @@ h4 {
 hr {
     margin: 0;
     height: 2px;
-    background-color: white;
+    background-color: var(--hr);
     border-radius: 2px;
 }
 
 .max {
-    background-color: grey;
+    background-color: var(--max);
     border-radius: 2px;
 }
 
@@ -118,6 +130,12 @@ hr {
     max-height: 1.3em;
     max-width: 1.3em;
     margin-bottom: -3px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 @media screen and (max-width: 800px) {
