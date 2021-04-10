@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: black;
+    background-color: var(--contact);
 }
 
 nav a:visited {
