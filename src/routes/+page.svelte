@@ -11,27 +11,29 @@
     </div>
   </div>
 </div>
-<div class="my-8 text-center">
-  <h2 class="text-3xl font-bold">Mes projets</h2>
-  <p>Some description or content for the header section can go here.</p>
-</div>
-<!-- Cards Section -->
-<div class="flex flex-col md:flex-row h-full md:h-auto p-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-  {#each data.projets as projet}
-  <div class="card bordered">
-    <figure>
-      <!-- You can place an image here if needed -->
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">{projet.meta.title}</h2>
-      <p>{projet.meta.date}</p>
-      <div class="card-actions">
-        <button class="btn btn-primary">Action</button>
+<section id="projets">
+  <div class="my-8 text-center">
+    <h2 class="text-3xl font-bold">Mes projets</h2>
+    <p>Some description or content for the header section can go here.</p>
+  </div>
+  <!-- Cards Section -->
+  <div class="flex flex-col md:flex-row h-full md:h-auto p-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+    {#each data.projets as projet}
+    <div class="card bordered">
+      <figure>
+        <!-- You can place an image here if needed -->
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">{projet.meta.title}</h2>
+        <p>{projet.meta.date}</p>
+        <div class="card-actions">
+          <button class="btn btn-primary">Action</button>
+        </div>
       </div>
     </div>
+    {/each}
   </div>
-  {/each}
-</div>
+</section>
 <div class="my-8 text-center">
   <h2 class="text-3xl font-bold">Expériences</h2>
 </div>
@@ -50,8 +52,6 @@
       </ul>
     </div>
   </div>
-  
-  <!-- Experience 2 -->
   <div class="timeline-item">
     <div class="timeline-icon bg-[#05d797]"></div>
     <div class="timeline-content">
@@ -65,9 +65,6 @@
       </ul>
     </div>
   </div>
-  
-  <!-- Add more experiences as needed -->
-  
 </div>
 <style>
   .timeline-item {
