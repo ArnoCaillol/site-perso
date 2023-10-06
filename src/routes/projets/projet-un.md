@@ -1,7 +1,7 @@
 ---
 title: Projet Un
 date: '2021-12-14'
-resume: 'Mon premier projet'
+caption: 'Mon premier projet'
 ---
 
 Mes premiers pas dans le monde professionel !

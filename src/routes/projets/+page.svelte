@@ -15,7 +15,7 @@
                 </a>
                 <div class="badge badge-secondary">NEW</div>
             </h2>
-            <p>{post.meta.resume ?? ''}</p>
+            <p>{post.meta.caption ?? ''}</p>
             <p>{post.meta.date}</p>
             <div class="card-actions justify-end">
                 <div class="badge badge-outline">SvelteKit</div> 
