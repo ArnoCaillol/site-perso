@@ -39,7 +39,7 @@
 </div>
 <div class="p-6">
   <!-- Experience 1 -->
-  <div class="timeline-item">
+  <div class="card card-side bordered timeline-item">
     <div class="timeline-icon bg-[#05d797]"></div>
     <div class="timeline-content">
       <h4 class="font-bold">2022 - Present</h4>
@@ -52,7 +52,7 @@
       </ul>
     </div>
   </div>
-  <div class="timeline-item">
+  <div class="card card-side bordered timeline-item">
     <div class="timeline-icon bg-[#05d797]"></div>
     <div class="timeline-content">
       <h4 class="font-bold">2019 - 2022</h4>
@@ -78,7 +78,8 @@
   .timeline-icon {
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 2px;
+    transform: skewX(-10deg);
     position: relative;
     z-index: 1;
   }
@@ -100,4 +101,15 @@
     left: -17px; /* Half the timeline icon width minus half this width */
   }
   
+  .card {
+    transition: box-shadow .2s ease-in-out;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .1);
+  }
+
+  .card:hover {
+    box-shadow: 0px 4px 10px 8px rgb(0 0 0 / 10%);
+  }
 </style>
