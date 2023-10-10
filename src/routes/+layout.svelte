@@ -5,6 +5,8 @@
 	import { onNavigate } from '$app/navigation';
 	
 	onNavigate((navigation) => {
+		console.log(navigation);
+
 		if (!document.startViewTransition) return;
 		
 		
@@ -42,13 +44,13 @@
 	
 	@keyframes slide-from-right {
 		from {
-			transform: translateX(30px);
+			transform: translateY(-30px);
 		}
 	}
 	
 	@keyframes slide-to-left {
 		to {
-			transform: translateX(-30px);
+			transform: translateY(30px);
 		}
 	}
 	

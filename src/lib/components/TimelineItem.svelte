@@ -2,39 +2,41 @@
   export let experience;
 </script>
 <li class="mb-10 ml-6">
-  <div class="absolute w-3 h-3 timeline-icon mt-1.5 -left-2.5 bg-[#05d797]"></div>
+  <div class="absolute w-3 h-3 timeline-icon mt-1.5 -left-3.5 bg-[#05d797]"></div>
   <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{experience.meta.date}</time>
   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{experience.meta.title}</h3>
   <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{experience.meta.caption}</p>
-  <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn more <svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg></a>
 </li>
 <style>
   .timeline-icon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 2px;
     transform: skewX(-10deg);
     z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Initial shadow */
   }
   
   li:hover .timeline-icon {
-    animation: float 1s ease-in-out infinite;
-    transition: mask-position 2s ease,-webkit-mask-position 2s ease;
-    mask-position: 120%;
-    opacity: 1;
+    transform: scale(1.05) skewX(-10deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow on hover */
   }
   
-  @keyframes float {
-    0% {
-      transform: scale(1) skewX(-10deg);
-    }
-    50% {
-      transform: scale(1.1) skewX(-10deg);
-    }
-    100% {
-      transform: scale(1) skewX(-10deg);
-    }
+  .timeline-icon::before {
+    content: "";
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -35px;
+    transform: skewX(-25deg);
+    transition: all 0.4s ease-out;
+  }
+  
+  li:hover .timeline-icon::before {
+    left: 130%;
   }
 </style>
