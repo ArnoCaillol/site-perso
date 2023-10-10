@@ -1,7 +1,8 @@
 <script>
     export let projet;
 </script>
-<div class="card bordered">
+<a href="{projet.path}">
+  <div class="card bordered">
     <figure>
       <!-- You can place an image here if needed -->
     </figure>
@@ -11,3 +12,4 @@
       <p>{projet.meta.caption}</p>
     </div>
   </div>
+</a>
