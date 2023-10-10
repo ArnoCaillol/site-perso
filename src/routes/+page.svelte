@@ -1,6 +1,6 @@
 <script>
-  import Projet from "../lib/components/Projet.svelte";
-  import TimelineItem from "../lib/components/TimelineItem.svelte";
+  import Projet from "$lib/components/Projet.svelte";
+  import TimelineItem from "$lib/components/TimelineItem.svelte";
   
   export let data;
   data.experiences = [
