@@ -33,7 +33,7 @@
     top: 0;
     left: -35px;
     transform: skewX(-25deg);
-    transition: all 0.4s ease-out;
+    transition: all 0.3s ease-out;
   }
   
   li:hover .timeline-icon::before {
