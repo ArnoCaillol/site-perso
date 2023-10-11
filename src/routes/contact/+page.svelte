@@ -1,9 +1,9 @@
-<div class="flex justify-center items-center">
-    <div class="w-3/4 lg:w-1/2 p-12 shadow-2xl rounded-lg">
-        <h2 class="text-3xl font-bold mb-6">Contact</h2>
+<div class="flex justify-center">
+    <div class="prose md:w-3/4 p-4">
+        <h1>Contact</h1>
         <form action="/submit" method="post">
             <div class="mb-6">
-                <label for="name" class="block text-lg mb-3">Nom</label>
+                <label for="name">Nom</label>
                 <input type="text" id="name" name="name" placeholder="Votre Nom" class="input input-bordered w-full text-lg">
             </div>
             <div class="mb-6">

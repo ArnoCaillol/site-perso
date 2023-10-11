@@ -1,12 +1,13 @@
 <script>
   import Projet from "$lib/components/Projet.svelte";
-    export let data;
+  export let data;
 </script>
-
-<h1 class="text-2xl font-bold mb-4">Projets</h1>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {#each data.projets as projet}
-    <Projet {projet}/>
-    {/each}
+<div class="prose lg:prose-lg mb-4">
+  <h1>Projets</h1>
+	<p class="text-gray-500">Some description or content for the header section can go here.</p>
+</div>
+<div class="flex flex-col md:flex-row h-full md:h-auto p-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+  {#each data.projets as projet}
+  <Projet {projet}/>
+  {/each}
 </div>

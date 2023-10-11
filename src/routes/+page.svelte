@@ -36,7 +36,7 @@
     <p>Some description or content for the header section can go here.</p>
   </div>
   <!-- Cards Section -->
-  <div class="flex flex-col md:flex-row h-full md:h-auto p-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
     {#each data.projets as projet}
     <Projet {projet}/>
     {/each}
