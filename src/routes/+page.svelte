@@ -4,23 +4,23 @@
   
   export let data;
   data.experiences = [
-    {
-      meta: {
-        title: 'E-Commerce UI code in Tailwind CSS',
-        date: 'April 2022',
-        caption: 'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.'
-      }
-    },
-    {
-      meta: {
-        title: 'Marketing UI design in Figma',
-        date: 'March 2022',
-        caption: 'All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.'
-      }
+  {
+    meta: {
+      title: 'E-Commerce UI code in Tailwind CSS',
+      date: 'April 2022',
+      caption: 'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.'
     }
+  },
+  {
+    meta: {
+      title: 'Marketing UI design in Figma',
+      date: 'March 2022',
+      caption: 'All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.'
+    }
+  }
   ]
 </script>
-<div class="hero min-h-screen bg-base-200">
+<div class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <img src="/images/logo.png" class="rounded-lg shadow-2xl" />
     <div>
@@ -31,8 +31,8 @@
   </div>
 </div>
 <section id="projets">
-  <div class="my-8 text-center">
-    <h2 class="text-3xl font-bold">Mes projets</h2>
+  <div class="prose my-8 text-center max-w-full">
+    <h2 class="text-3xl">Mes projets</h2>
     <p>Some description or content for the header section can go here.</p>
   </div>
   <!-- Cards Section -->
@@ -42,7 +42,7 @@
     {/each}
   </div>
 </section>
-<div class="my-8 text-center">
+<div class="prose my-8 text-center max-w-full">
   <h2 class="text-3xl font-bold">Expériences</h2>
 </div>
 <ol class="relative m-6 border-l border-gray-200 dark:border-gray-700"> 

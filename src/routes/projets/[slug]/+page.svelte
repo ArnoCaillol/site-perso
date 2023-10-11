@@ -5,7 +5,7 @@
 <title>Projet - {data.title}</title>
 <meta property="og:title" content={data.title} />
 </svelte:head>
-<article class="prose lg:prose-lg mx-auto p-4">
+<article class="prose lg:prose-lg mx-auto p-4 mb-8">
 	<h1>{data.title}</h1>
 	<p class="text-gray-500">Published: {data.date}</p>
 	<div class="carousel w-full">
