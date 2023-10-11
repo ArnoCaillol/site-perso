@@ -1,6 +1,7 @@
 /** @type {import('./$types').Actions} */
-export const actions = {	
-    default: async (event) => {		
-        setTimeout(() => {return true}, 5000)
+export const actions = {    
+    default: async (event) => {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        return;
     }
 };

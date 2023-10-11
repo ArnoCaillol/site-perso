@@ -4,10 +4,10 @@
 <div class="flex justify-center">
     <div class="prose md:w-3/4 p-4">
         <h1>Contact</h1>
-        <form method="post" use:enhance={({ formElement, formData, action, cancel }) => {
-            console.log('test')
+        <form method="post" on:submit={() =>  document.querySelector('.loading').classList.remove('opacity-0')} use:enhance={({ formElement, formData, action, cancel }) => {
             return async ({ result }) => {
                 console.log(result)
+                document.querySelector('.loading').classList.add('opacity-0');
                 if(result.type === 'success'){
                     const toastSuccess = document.getElementById('success');
                     toastSuccess.classList.remove('hidden');
@@ -30,7 +30,12 @@
                 <label for="message" class="block text-lg mb-3">Message</label>
                 <textarea id="message" name="message" placeholder="Votre Message" rows="5" class="textarea textarea-bordered w-full text-lg"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Envoyer </button>
+            <div class="mb-6 flex align-center gap-4">
+                <button type="submit" class="btn btn-primary">
+                    Envoyer
+                </button>
+                <span class="loading loading-spinner transition-opacity duration-500 ease-in opacity-0"></span>
+            </div>
         </form>
     </div>
 </div>
@@ -42,8 +47,3 @@
       <span>Error while sending the message.</span>
     </div>
 </div>
-<style>
-    .alert {
-        transition: all .5s ease;
-    }
-</style>
