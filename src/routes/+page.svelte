@@ -22,7 +22,7 @@
 </script>
 <div class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
-    <img src="/images/logo.png" class="rounded-lg shadow-2xl" />
+    <img src="/images/logo.png" class="rounded-full shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Bonjour !</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -45,7 +45,7 @@
 <div class="prose my-8 text-center max-w-full">
   <h2 class="text-3xl font-bold">Expériences</h2>
 </div>
-<ol class="relative m-6 border-l border-gray-200 dark:border-gray-700"> 
+<ol class="relative m-8 border-l border-gray-200 dark:border-gray-700"> 
   {#each data.experiences as experience}
   <TimelineItem {experience}/>
   {/each}
