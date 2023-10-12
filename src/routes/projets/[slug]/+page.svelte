@@ -11,7 +11,7 @@
     }
 </script>
 <svelte:head>
-<title>Projet - {data.title}</title>
+<title>Arnaud Caillol - {data.title}</title>
 <meta property="og:title" content={data.title} />
 </svelte:head>
 <article class="prose lg:prose-lg mx-auto p-4 mb-8">
@@ -19,7 +19,6 @@
 	<p class="text-gray-500">Published: {data.date}</p>
 	<div class="carousel w-full">
 		{#if currentSlide === 1}
-
 		<div id="slide1" class="carousel-item relative w-full">
 			<img src="https://picsum.photos/500/200" class="w-full rounded-xl object-cover" />
 			<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -28,7 +27,6 @@
 			</div>
 		</div> 
 		{:else if currentSlide === 2}
- 
 		<div id="slide2" class="carousel-item relative w-full">
 			<img src="https://picsum.photos/500/300" class="w-full rounded-xl object-cover" />
 			<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -37,7 +35,6 @@
 			</div>
 		</div>
 		{/if}
-
 	</div>
 	<svelte:component this={data.content} />
 </article>
