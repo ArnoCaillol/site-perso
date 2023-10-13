@@ -4,20 +4,27 @@
 	export let data;
 	let emblaApi;
 	let options = { loop: true };
-	let progress = 0;
-	let progressStep = 0;
 	
 	const onInit = (event) => {
 		emblaApi = event.detail;
-		progress = progressStep = 100/emblaApi.slideNodes().length;
-
+		
 		emblaApi.on('select', () => {
-			let step = emblaApi.selectedScrollSnap() + 1;
-			progress = step*progressStep;
+			const dots = document.querySelectorAll('.dot');
+			dots[emblaApi.previousScrollSnap()].classList.remove('selected');
+			dots[emblaApi.selectedScrollSnap()].classList.add('selected');
 		});
 	}
 	const scrollPrev = () => emblaApi.scrollPrev();
 	const scrollNext = () => emblaApi.scrollNext();
+	const scrollTo = (index) => {
+		emblaApi.scrollTo(index);
+	}
+	
+	let images = [
+	'https://picsum.photos/500/200',
+	'https://picsum.photos/500/300',
+	'https://picsum.photos/500/250',
+	]
 </script>
 
 <svelte:head>
@@ -32,17 +39,20 @@
 		<button class="btn" on:click={scrollPrev}>❮</button>
 		<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
 			<div class="embla__container">
+				{#each images as src}
 				<div class="embla__slide flex items-center">
-					<img src="https://picsum.photos/500/200" class="w-full rounded-lg object-cover" />
+					<img {src} class="w-full rounded-lg object-cover" />
 				</div>
-				<div class="embla__slide flex items-center">
-					<img src="https://picsum.photos/500/300" class="w-full rounded-lg object-cover" />
-				</div>
+				{/each}
 			</div>
 		</div>
 		<button class="btn" on:click={scrollNext}>❯</button>
 	</div>
-	<progress class="progress" value="{progress}" max="100"></progress>
+	<div class="flex justify-center space-x-3">
+		{#each images as img, i}
+		<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot{i == 0 ? ' selected' : ''}"></button>
+		{/each}
+	</div>
 	<svelte:component this={data.content} />
 </article>
 
@@ -57,15 +67,12 @@
 		flex: 0 0 100%;
 		min-width: 0;
 	}
-	.progress {
-		height: .5px;
+	
+	.dot {
+		background-color: grey;
 	}
 	
-	.progress::-webkit-progress-value {
-		transition: width 0.3s ease-in-out;
-	}
-	
-	.progress::-moz-progress-bar {
-		transition: width 0.3s ease-in-out;
+	.selected {
+		background-color: white;
 	}
 </style>
