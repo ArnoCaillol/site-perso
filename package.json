@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"embla-carousel-svelte": "^8.0.0-rc14",
 		"iconify-icon": "^1.0.8"
 	}
 }
