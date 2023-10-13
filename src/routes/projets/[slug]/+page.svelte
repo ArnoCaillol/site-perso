@@ -34,9 +34,9 @@
 
 <article class="prose lg:prose-lg mx-auto p-4 mb-8">
 	<h1>{data.title}</h1>
-	<p class="text-gray-500">Published: {data.date}</p>
+	<small class="text-gray-500">Published: {data.date}</small>
 	<div class="flex items-center">
-		<button class="btn" on:click={scrollPrev}>❮</button>
+		<button class="btn hidden md:block mr-1" on:click={scrollPrev}>❮</button>
 		<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
 			<div class="embla__container">
 				{#each images as src}
@@ -46,7 +46,7 @@
 				{/each}
 			</div>
 		</div>
-		<button class="btn" on:click={scrollNext}>❯</button>
+		<button class="btn hidden md:block ml-1" on:click={scrollNext}>❯</button>
 	</div>
 	<div class="flex justify-center space-x-3">
 		{#each images as img, i}
