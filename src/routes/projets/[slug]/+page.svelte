@@ -33,8 +33,8 @@
 </svelte:head>
 
 <article class="prose lg:prose-lg mx-auto p-4 mb-8">
-	<h1>{data.title}</h1>
-	<small class="text-gray-500">Published: {data.date}</small>
+	<h1 class="mb-2">{data.title}</h1>
+	<small class="text-gray-500">{data.date}</small>
 	<div class="flex items-center">
 		<button class="btn hidden md:block mr-1" on:click={scrollPrev}>❮</button>
 		<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">

@@ -6,7 +6,7 @@
   <h1>Projets</h1>
 	<p class="text-gray-500">Some description or content for the header section can go here.</p>
 </div>
-<div class="flex flex-col md:flex-row h-full md:h-auto p-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+<div class="flex flex-col md:flex-row h-full md:h-auto p-4 w-full grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
   {#each data.projets as projet}
   <Projet {projet}/>
   {/each}
