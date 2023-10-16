@@ -53,18 +53,51 @@
   </ul>
 </section>
 
-<section class="flex flex-col flex-wrap justify-center content-center h-screen">
-  <div class="prose prose-lg my-8 text-center max-w-full">
-    <h2 class="text-3xl">Une question ?</h2>
-  </div>
-  <div class=" space-x-4">
-    <a href="/contact" class="btn btn-primary">Contactez moi !</a>
-    <a href="/projets" class="btn btn-secondary">Mes projets</a>
+<section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
+  <img>
+  <div class="card bg-base-100 p-8">
+    <div class="prose prose-lg mb-8 text-center max-w-full">
+      <h2 class="text-3xl">Une question ?</h2>
+    </div>
+    <div class=" space-x-4">
+      <a href="/contact" class="btn btn-primary">Contactez moi !</a>
+      <a href="/projets" class="btn btn-secondary">Mes projets</a>
+    </div>
   </div>
 </section>
 
 <style>
+  section {
+    margin-bottom: 5rem;
+  }
+  
   ul {
     list-style-type: none;
+  }
+  
+  #cta{
+    position: relative;
+    width: 100%; /* Set the width and height as needed */
+    overflow: hidden;
+  }
+  
+  #cta>img { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/laptop.jpg'); /* Replace with your image URL */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px) grayscale(70%);
+    z-index: -1;
+  }
+  
+  #cta .card {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    transform: perspective(1000px);
   }
 </style>
