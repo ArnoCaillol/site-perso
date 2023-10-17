@@ -89,9 +89,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
     filter: blur(3px) grayscale(70%);
     z-index: -1;
   }
