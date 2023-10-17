@@ -1,7 +1,11 @@
 <script>
     export let projet;
+  
+  function initViewTransition(e){
+    e.target.style.viewTransitionName = 'titre-projet'
+  }
 </script>
-<a href="{projet.path}">
+<a href="{projet.path}" on:click={initViewTransition}>
   <div class="card bordered">
     <figure>
       <img src="https://picsum.photos/500/200">
