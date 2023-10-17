@@ -1,6 +1,8 @@
 <script>
   import Projet from "$lib/components/Projet.svelte";
   import TimelineItem from "$lib/components/TimelineItem.svelte";
+  import logo from '$lib/assets/logo.png';
+  import laptop from '$lib/assets/laptop.jpg';
   
   export let data;
   data.experiences = [
@@ -22,7 +24,7 @@
 </script>
 <section class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
-    <img src="/images/logo.png" class="rounded-lg shadow-2xl" />
+    <img src="{logo}" class="rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold">Bonjour !</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -54,7 +56,7 @@
 </section>
 
 <section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
-  <img>
+  <img src="{laptop}">
   <div class="card bg-base-100 p-8">
     <div class="prose prose-lg mb-8 text-center max-w-full">
       <h2 class="text-3xl">Une question ?</h2>
@@ -87,7 +89,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/images/laptop.jpg'); /* Replace with your image URL */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
