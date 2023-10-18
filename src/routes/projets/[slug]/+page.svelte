@@ -10,10 +10,10 @@
 		
 		emblaApi.on('select', () => {
 			const dots = document.querySelectorAll('.dot');
-			dots[emblaApi.previousScrollSnap()].classList.remove('bg-base-200');
-			dots[emblaApi.previousScrollSnap()].classList.add('bg-base-300');
-			dots[emblaApi.selectedScrollSnap()].classList.remove('bg-base-300');
-			dots[emblaApi.selectedScrollSnap()].classList.add('bg-base-200');
+			dots[emblaApi.previousScrollSnap()].classList.remove('bg-base-300');
+			dots[emblaApi.previousScrollSnap()].classList.add('bg-base-200');
+			dots[emblaApi.selectedScrollSnap()].classList.remove('bg-base-200');
+			dots[emblaApi.selectedScrollSnap()].classList.add('bg-base-300');
 		});
 	}
 	const scrollPrev = () => emblaApi.scrollPrev();
@@ -57,7 +57,7 @@
 	</div>
 	<div class="flex justify-center space-x-3">
 		{#each images as img, i}
-		<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot{i == 0 ? ' bg-base-200' : ' bg-base-300'}"></button>
+		<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot{i == 0 ? ' bg-base-300' : ' bg-base-200'}"></button>
 		{/each}
 	</div>
 	<svelte:component this={data.content} />
