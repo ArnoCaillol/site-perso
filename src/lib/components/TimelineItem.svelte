@@ -1,7 +1,7 @@
 <script>
   export let experience;
 </script>
-<li class="prose prose-lg mb-10 ml-6">
+<li class="prose prose-lg mt-10 ml-6">
   <div class="absolute w-3 h-3 timeline-icon mt-1.5 -left-3.5 bg-[#05d797]"></div>
   <time class="text-gray-400 dark:text-gray-500">{experience.meta.date}</time>
   <h3 class="mt-1 text-gray-900 dark:text-white">{experience.meta.title}</h3>

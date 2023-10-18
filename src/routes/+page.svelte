@@ -35,6 +35,9 @@
     {#each data.experiences as experience}
     <TimelineItem {experience}/>
     {/each}
+    <li class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 timeline-start bg-gray-200 dark:bg-gray-700"></div>
+    </li>
   </ul>
 </section>
 
@@ -58,6 +61,17 @@
   
   ul {
     list-style-type: none;
+  }
+
+  .timeline-start {
+    width: 1rem;
+    height: 1rem;
+    left: -.5rem;
+    border-radius: 100%;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Initial shadow */
   }
   
   #cta{

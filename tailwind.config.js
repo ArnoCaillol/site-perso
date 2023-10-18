@@ -11,12 +11,20 @@ export default {
   daisyui: {
     themes: [
       {
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          primary: "#03A688",
+          secondary: "#27418C"
+        },
+      },
+      {
         dark: {
           ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
           primary: "#03A688",
           secondary: "#27418C"
         },
       },],
-  },
-}
-
+    },
+  }
+  
+  
