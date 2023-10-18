@@ -28,8 +28,8 @@
 	a[aria-current='page']::before {
 		content: '●';
 		font-size: 0.7rem;
-		color: #05d797;
 		padding-right: 2px;
+		color: #05d797;
 		view-transition-name: active-page;
 	}
 </style>
