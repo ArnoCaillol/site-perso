@@ -9,8 +9,8 @@
 	</div>
 	<nav class="flex-none">
 		<ul class="menu menu-horizontal px-1">
-			<li><a aria-current={$page.url.pathname === '/projets' ? 'page' : undefined} href="/projets">Projets</a></li>
-			<li><a aria-current={$page.url.pathname === '/contact' ? 'page' : undefined} href="/contact">Contact</a></li>
+			<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
+			<li><a aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined} href="/contact">Contact</a></li>
 		</ul>
 	</nav>
 </header>
