@@ -5,22 +5,6 @@
   import laptop from '$lib/assets/laptop.jpg';
   
   export let data;
-  data.experiences = [
-  {
-    meta: {
-      title: 'E-Commerce UI code in Tailwind CSS',
-      date: 'April 2022',
-      caption: 'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.'
-    }
-  },
-  {
-    meta: {
-      title: 'Marketing UI design in Figma',
-      date: 'March 2022',
-      caption: 'All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.'
-    }
-  }
-  ]
 </script>
 <section class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
@@ -28,7 +12,6 @@
     <div>
       <h1 class="text-5xl font-bold">Bonjour !</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button class="btn btn-primary">Get Started</button>
     </div>
   </div>
 </section>

@@ -11,14 +11,13 @@ export default {
   daisyui: {
     themes: [
       {
-        mytheme: {
-          "primary": "#a991f7",
-          "secondary": "#f6d860",
-          "accent": "#37cdbe",
-          "neutral": "#3d4451",
-          "base-100": "#ffffff",
+        dark: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+          primary: "#05d797",
+          "primary-focus": "#05a090",
+          secondary: "#290d79"
         },
-      },'light', 'dark'],
+      },],
   },
 }
 
