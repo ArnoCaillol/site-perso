@@ -57,7 +57,7 @@
 	</div>
 	<div class="flex justify-center space-x-3">
 		{#each images as img, i}
-		<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot{i == 0 ? ' bg-base-300' : ' bg-base-200'}"></button>
+		<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
 		{/each}
 	</div>
 	<svelte:component this={data.content} />

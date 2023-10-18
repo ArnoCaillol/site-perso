@@ -8,7 +8,7 @@
 </script>
 <section class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
-    <img src="{logo}" class="rounded-lg shadow-2xl" />
+    <img src="{logo}" class="rounded-lg shadow-2xl" alt="Arnaud Caillol"/>
     <div>
       <h1 class="text-5xl font-bold">Bonjour !</h1>
       <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -42,7 +42,7 @@
 </section>
 
 <section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
-  <img src="{laptop}">
+  <img src="{laptop}" alt="">
   <div class="card bg-base-100 p-8">
     <div class="prose prose-lg mb-8 text-center max-w-full">
       <h2 class="text-3xl">Une question ?</h2>
@@ -69,14 +69,11 @@
     left: -.5rem;
     border-radius: 100%;
     z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Initial shadow */
   }
   
   #cta{
     position: relative;
-    width: 100%; /* Set the width and height as needed */
+    width: 100%;
     overflow: hidden;
   }
   
