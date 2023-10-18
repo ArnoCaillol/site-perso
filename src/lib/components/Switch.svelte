@@ -4,20 +4,16 @@
     let current_theme;
     
     onMount(() => {
-        const saved_theme = document.documentElement.getAttribute("data-theme");
-        if (saved_theme) {
-            current_theme = saved_theme;
-            return;
+        const theme = document.documentElement.getAttribute("data-theme");
+        if (theme) {
+            set_theme(theme);
         }
-        
-        set_theme(theme);
     });
     
     function set_theme(theme) {
         const one_year = 60 * 60 * 24 * 365;
         document.cookie = `theme=${theme}; max-age=${one_year}; path=/`;
         document.documentElement.setAttribute("data-theme", theme);
-        current_theme = theme;
     }
 </script>
 
