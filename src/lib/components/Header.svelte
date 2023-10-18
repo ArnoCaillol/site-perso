@@ -2,9 +2,6 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/assets/logo.png';
 	import Switch from './Switch.svelte'
-	import { theme } from '$lib/stores'
-	let sliderValue;
-	
 </script>
 <header class="sticky top-0 z-50 navbar bg-base-100 shadow-md">
 	<div class="flex-1">
