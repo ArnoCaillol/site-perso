@@ -21,7 +21,7 @@
     <p>Some description or content for the header section can go here.</p>
   </div>
   <!-- Cards Section -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 p-4">
     {#each data.projets as projet}
     <Projet {projet}/>
     {/each}
@@ -31,12 +31,12 @@
   <div class="prose prose-lg my-8 text-center max-w-full">
     <h2 class="text-3xl">Expériences</h2>
   </div>
-  <ul class="relative m-8 border-l border-gray-200 dark:border-gray-700"> 
+  <ul class="relative m-8 border-l border-gray-700"> 
     {#each data.experiences as experience}
     <TimelineItem {experience}/>
     {/each}
     <li class="mb-10 ml-6">
-      <div class="absolute w-3 h-3 timeline-start bg-gray-200 dark:bg-gray-700"></div>
+      <div class="absolute w-3 h-3 timeline-start bg-gray-700"></div>
     </li>
   </ul>
 </section>
@@ -66,7 +66,7 @@
   .timeline-start {
     width: 1rem;
     height: 1rem;
-    left: -.5rem;
+    left: -.55rem;
     border-radius: 100%;
     z-index: 1;
   }
