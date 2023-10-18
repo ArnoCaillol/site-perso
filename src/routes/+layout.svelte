@@ -3,7 +3,8 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { onNavigate } from '$app/navigation';
-	
+	import { theme } from '$lib/stores'
+
 	onNavigate((navigation) => {
 		document.documentElement.classList[navigation.delta ? 'add' : 'remove']('back-transition');
 		
@@ -18,15 +19,17 @@
 	});
 	export let data;
 </script>
-<Header />
-
-{#key data.currentRoute}
-<main class="container mx-auto">
-	<slot />
-</main>
-{/key}
-
-<Footer />
+<div data-theme="{$theme}">
+	<Header />
+	
+	{#key data.currentRoute}
+	<main class="container mx-auto">
+		<slot />
+	</main>
+	{/key}
+	
+	<Footer />
+</div>
 
 <style>
 	@keyframes fade-in {

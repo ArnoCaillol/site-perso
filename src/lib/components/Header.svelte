@@ -1,6 +1,10 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/assets/logo.png';
+	import Switch from './Switch.svelte'
+	import { theme } from '$lib/stores'
+	let sliderValue;
+	
 </script>
 <header class="sticky top-0 z-50 navbar bg-base-100 shadow-md">
 	<div class="flex-1">
@@ -8,9 +12,10 @@
 		<span class="hidden md:block text-xl ml-2">Arnaud Caillol</span>
 	</div>
 	<nav class="flex-none">
-		<ul class="menu menu-horizontal px-1">
+		<ul class="menu menu-horizontal items-center px-1">
 			<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
 			<li><a aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined} href="/contact">Contact</a></li>
+			<li><Switch /></li>
 		</ul>
 	</nav>
 </header>
