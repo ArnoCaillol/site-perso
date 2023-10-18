@@ -7,8 +7,6 @@
 	onNavigate((navigation) => {
 		document.documentElement.classList[navigation.delta ? 'add' : 'remove']('back-transition');
 
-		console.log(navigation)
-		
 		if (!document.startViewTransition) return;
 		
 		return new Promise((resolve) => {
