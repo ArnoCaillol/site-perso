@@ -6,7 +6,7 @@
   }
 </script>
 <a href="{projet.path}" on:click={initViewTransition}>
-  <div class="card bordered bg-base-300">
+  <div class="card bordered bg-base-300 shadow-md hover:shadow-lg">
     <figure>
       <img src="https://picsum.photos/500/200">
     </figure>
@@ -21,12 +21,10 @@
 <style>
   .card {
     transition: .5s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   
   .card:hover {
     scale: 1.02;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   }
   
   img {

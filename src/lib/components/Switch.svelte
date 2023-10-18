@@ -1,10 +1,10 @@
 <script>
     import { onMount } from "svelte";
 
-    let current_theme;
+    let theme;
     
     onMount(() => {
-        const theme = document.documentElement.getAttribute("data-theme");
+        theme = document.documentElement.getAttribute("data-theme");
         if (theme) {
             set_theme(theme);
         }
@@ -17,7 +17,7 @@
     }
 </script>
 
-<select aria-label="toggle theme" on:change="{(e) => set_theme(e.target.value)}">
+<select value={theme} aria-label="toggle theme" on:change="{(e) => set_theme(e.target.value)}">
     <option value="">Auto</option>
     <option value="light">Clair</option>
     <option value="dark">Sombre</option>
