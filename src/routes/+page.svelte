@@ -47,7 +47,7 @@
     <div class="prose prose-lg mb-8 text-center max-w-full">
       <h2 class="text-3xl">Une question ?</h2>
     </div>
-    <div class=" space-x-4">
+    <div class="btn-group btn-group-vertical md:btn-group-horizontal">
       <a href="/contact" class="btn btn-primary">Contactez moi !</a>
       <a href="/projets" class="btn btn-secondary">Mes projets</a>
     </div>
