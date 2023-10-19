@@ -3,8 +3,29 @@
   import TimelineItem from "$lib/components/TimelineItem.svelte";
   import logo from '$lib/assets/logo.png';
   import laptop from '$lib/assets/laptop.jpg';
+  import emblaCarouselSvelte from 'embla-carousel-svelte'
   
   export let data;
+  let emblaApi;
+  let options = { loop: true };
+  
+  const onInit = (event) => {
+    emblaApi = event.detail;
+    
+    emblaApi.on('select', () => {
+      const dots = document.querySelectorAll('.dot');
+      dots[emblaApi.previousScrollSnap()].classList.remove('bg-base-300');
+      dots[emblaApi.previousScrollSnap()].classList.add('bg-base-200');
+      dots[emblaApi.selectedScrollSnap()].classList.remove('bg-base-200');
+      dots[emblaApi.selectedScrollSnap()].classList.add('bg-base-300');
+    });
+  }
+  const scrollPrev = () => emblaApi.scrollPrev();
+  const scrollNext = () => emblaApi.scrollNext();
+  const scrollTo = (index) => {
+    emblaApi.scrollTo(index);
+  }
+  
 </script>
 <section class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
@@ -15,15 +36,27 @@
     </div>
   </div>
 </section>
-<section id="projets">
+<section id="projets" class="p-4">
   <div class="prose lg:prose-lg my-8 text-center max-w-full">
     <h2 class="text-3xl">Mes projets</h2>
     <p>Some description or content for the header section can go here.</p>
   </div>
-  <!-- Cards Section -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 p-4">
-    {#each data.projets as projet}
-    <Projet {projet}/>
+  <div class="flex items-center justify-center mb-4">
+    <button class="btn hidden md:block mr-1" on:click={scrollPrev}>❮</button>
+    <div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
+      <div class="embla__container">
+        {#each data.projets as projet}
+        <div class="embla__slide items-center">
+          <Projet {projet}/>
+        </div>
+        {/each}
+      </div>
+    </div>
+    <button class="btn hidden md:block ml-1" on:click={scrollNext}>❯</button>
+  </div>
+  <div class="flex justify-center space-x-3">
+    {#each data.projets as img, i}
+    <button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
     {/each}
   </div>
 </section>
@@ -62,7 +95,7 @@
   ul {
     list-style-type: none;
   }
-
+  
   .timeline-start {
     width: 1rem;
     height: 1rem;
@@ -92,5 +125,30 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     transform: perspective(1000px);
+  }
+
+	.embla {
+		overflow: hidden;
+	}
+	
+	.embla__container {
+		display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+	}
+	
+	.embla__slide {
+		flex: 0 0 auto;
+		min-width: 0;
+    margin-right: 1rem;
+    max-width: 100%;
+	}
+
+  .embla__slide:first-child {
+    margin-left: 1rem;
+  }
+
+  .embla__slide:last-child {
+    margin-right: 0;
   }
 </style>

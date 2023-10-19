@@ -5,7 +5,7 @@
     e.target.style.viewTransitionName = 'titre-projet'
   }
 </script>
-<a href="{projet.path}" on:click={initViewTransition}>
+<a class="projet" href="{projet.path}" on:click={initViewTransition}>
   <div class="card bordered bg-base-300 shadow-md hover:shadow-xl">
     <figure>
       <img src="https://picsum.photos/500/200">
@@ -34,5 +34,11 @@
   figure {
     max-height: 10rem;
     overflow: hidden;
+  }
+  
+  .projet {
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 1;
+    transform: translateX(0);
   }
 </style>
