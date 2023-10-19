@@ -36,7 +36,7 @@
     </div>
   </div>
 </section>
-<section id="projets" class="p-4">
+<section id="projets">
   <div class="prose lg:prose-lg my-8 text-center max-w-full">
     <h2 class="text-3xl">Mes projets</h2>
     <p>Some description or content for the header section can go here.</p>
@@ -89,7 +89,8 @@
 
 <style>
   section {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
   }
   
   ul {
