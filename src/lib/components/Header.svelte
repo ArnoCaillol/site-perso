@@ -5,7 +5,7 @@
 </script>
 <header class="sticky top-0 z-50 navbar bg-base-100 shadow-md">
 	<div class="flex-1">
-		<a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/" class="btn btn-ghost normal-case text-xl"><img src="{logo}"></a>
+		<a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/" class="btn btn-ghost normal-case text-xl"><img src="{logo}" alt="Arnaud Caillol"></a>
 		<span class="hidden md:block text-xl ml-2">Arnaud Caillol</span>
 	</div>
 	<nav class="flex-none">
