@@ -90,7 +90,7 @@
 		view-transition-name: titre-projet;
 	}
 
-	.btn-square {
+	a.btn-square {
 		margin-left: -3rem;
 	}
 </style>

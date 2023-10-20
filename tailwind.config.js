@@ -11,21 +11,22 @@ export default {
   daisyui: {
     themes: [
       {
+        dark: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dracula]"],
+          primary: "#03A688",
+          secondary: "#27418C"
+        },
+      },
+      {
         light: {
-          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          ...require("daisyui/src/theming/themes")["[data-theme=corporate]"],
           primary: "#03A688",
           'primary-content': "white",
           secondary: "#27418C",
           'secondary-content': "white",
         },
       },
-      {
-        dark: {
-          ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
-          primary: "#03A688",
-          secondary: "#27418C"
-        },
-      },],
+    ],
     },
   }
   

@@ -17,7 +17,7 @@
     }
 </script>
 
-<select class="select" value={theme} aria-label="toggle theme" on:change="{(e) => set_theme(e.target.value)}">
+<select class="select" value={theme} aria-label="change theme" on:change="{(e) => set_theme(e.target.value)}">
     <option value="">Auto</option>
     <option value="light">Clair</option>
     <option value="dark">Sombre</option>
