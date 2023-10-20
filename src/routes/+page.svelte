@@ -33,67 +33,65 @@
 <meta property="og:title" content="Arnaud Caillol" />
 </svelte:head>
 
-<div class="grid gap-8">
-  <section class="hero min-h-screen">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="{logo}" class="rounded-lg shadow-2xl" alt="Arnaud Caillol"/>
-      <div>
-        <h1 class="text-5xl font-bold">Bonjour !</h1>
-        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      </div>
+<section class="hero min-h-screen">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <img src="{logo}" class="rounded-lg shadow-2xl" alt="Arnaud Caillol"/>
+    <div>
+      <h1 class="text-5xl font-bold">Bonjour !</h1>
+      <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
     </div>
-  </section>
-  <section id="projets">
-    <div class="prose lg:prose-lg my-8 text-center max-w-full">
-      <div class="divider"><h2 class="text-3xl ">Mes projets</h2></div>
-      <p>Some description or content for the header section can go here.</p>
-    </div>
-    <div class="flex items-center justify-center mb-4">
-      <button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
-      <div class="embla md:border-x-2 border-base-300" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
-        <div class="embla__container">
-          {#each data.projets as projet}
-          <div class="embla__slide items-center">
-            <Projet {projet}/>
-          </div>
-          {/each}
+  </div>
+</section>
+<section id="projets">
+  <div class="prose lg:prose-lg my-8 text-center max-w-full">
+    <h2 class="text-3xl">Mes projets</h2>
+    <p>Some description or content for the header section can go here.</p>
+  </div>
+  <div class="flex items-center justify-center mb-4">
+    <button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
+    <div class="embla md:border-x-2 border-base-300" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
+      <div class="embla__container">
+        {#each data.projets as projet}
+        <div class="embla__slide items-center">
+          <Projet {projet}/>
         </div>
-      </div>
-      <button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
-    </div>
-    <div class="flex justify-center space-x-3">
-      {#each data.projets as img, i}
-      <button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
-      {/each}
-    </div>
-  </section>
-  <section id="experiences">
-    <div class="prose prose-lg my-8 text-center max-w-full">
-      <div class="divider"><h2 class="text-3xl ">Expériences</h2></div>
-    </div>
-    <ul class="relative m-8 border-l border-gray-700"> 
-      {#each data.experiences as experience}
-      <TimelineItem {experience}/>
-      {/each}
-      <li class="mb-10 ml-6">
-        <div class="absolute w-3 h-3 timeline-start bg-gray-700"></div>
-      </li>
-    </ul>
-  </section>
-  
-  <section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
-    <img src="{laptop}" alt="">
-    <div class="card bg-base-100 shadow-xl p-8">
-      <div class="prose prose-lg mb-8 text-center max-w-full">
-        <h2 class="text-3xl">Une question ?</h2>
-      </div>
-      <div class="btn-group btn-group-vertical md:btn-group-horizontal">
-        <a href="/contact" class="btn btn-primary">Contactez moi !</a>
-        <a href="/projets" class="btn btn-secondary">Mes projets</a>
+        {/each}
       </div>
     </div>
-  </section>
-</div>
+    <button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
+  </div>
+  <div class="flex justify-center space-x-3">
+    {#each data.projets as img, i}
+    <button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
+    {/each}
+  </div>
+</section>
+<section id="experiences">
+  <div class="prose prose-lg my-8 text-center max-w-full">
+    <h2 class="text-3xl">Expériences</h2>
+  </div>
+  <ul class="relative m-8 border-l border-gray-700"> 
+    {#each data.experiences as experience}
+    <TimelineItem {experience}/>
+    {/each}
+    <li class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 timeline-start bg-gray-700"></div>
+    </li>
+  </ul>
+</section>
+
+<section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
+  <img src="{laptop}" alt="">
+  <div class="card bg-base-100 shadow-xl p-8">
+    <div class="prose prose-lg mb-8 text-center max-w-full">
+      <h2 class="text-3xl">Une question ?</h2>
+    </div>
+    <div class="btn-group btn-group-vertical md:btn-group-horizontal">
+      <a href="/contact" class="btn btn-primary">Contactez moi !</a>
+      <a href="/projets" class="btn btn-secondary">Mes projets</a>
+    </div>
+  </div>
+</section>
 
 <style>
   section {
@@ -102,11 +100,6 @@
   
   ul {
     list-style-type: none;
-  }
-
-  h2 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
   }
   
   .timeline-start {
