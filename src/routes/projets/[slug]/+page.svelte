@@ -1,7 +1,7 @@
 <script>
 	import emblaCarouselSvelte from 'embla-carousel-svelte'
-    import ScrollTop from '$lib/components/ScrollTop.svelte';
-
+	import ScrollTop from '$lib/components/ScrollTop.svelte';
+	
 	let y;
 	
 	export let data;
@@ -21,23 +21,21 @@
 	}
 	const scrollPrev = () => emblaApi.scrollPrev();
 	const scrollNext = () => emblaApi.scrollNext();
-	const scrollTo = (index) => {
-		emblaApi.scrollTo(index);
-	}
+	const scrollTo = (index) => emblaApi.scrollTo(index);
 	
 	let images = [
-		{
-			src: 'https://picsum.photos/500/200',
-			alt: ''
-		},
-		{
-			src: 'https://picsum.photos/500/300',
-			alt: ''
-		},
-		{
-			src: 'https://picsum.photos/500/250',
-			alt: ''
-		},
+	{
+		src: 'https://picsum.photos/500/200',
+		alt: ''
+	},
+	{
+		src: 'https://picsum.photos/500/300',
+		alt: ''
+	},
+	{
+		src: 'https://picsum.photos/500/250',
+		alt: ''
+	},
 	]
 </script>
 
@@ -48,14 +46,12 @@
 
 <div class="flex mx-auto justify-center h-full">
 	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {y}px">
-		<a href="/projets" class="btn btn-square">❮</a>
+		<a href="/projets" class="btn bg-[#05d797]"><span>❮</span></a>
 	</div> 
 	<article class="prose lg:prose-lg p-4 mb-8">
-		<div class="flex">
-			<div>
-				<h1 class="mb-2 projet-header">{data.title}</h1>
-				<small class="text-gray-500">{data.date}</small>
-			</div>
+		<div class="flex flex-col items-center">
+			<h1 class="mb-2 projet-header">{data.title}</h1>
+			<small class="text-gray-500">{data.date}</small>
 		</div>
 		<div class="flex items-center">
 			<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
@@ -98,12 +94,41 @@
 	.projet-header {
 		view-transition-name: titre-projet;
 	}
-
+	
 	.divider-horizontal{
 		transition: margin linear 150ms;
 	}
-
+	
 	.divider-horizontal:before {
 		height: 0 !important;
+	}
+	
+	@keyframes initialSkew {
+		0% {
+			transform: skewX(0deg);
+		}
+		100% {
+			transform: skewX(-10deg);
+		}
+	}
+	
+	a.btn {
+		aspect-ratio: 1;
+		transform: skewX(-10deg);
+		border-radius: 2px;
+		transition: all 150ms ease-in-out;
+		animation: initialSkew 1ms forwards; /* Short duration to set initial value */
+	}
+	
+	a.btn>span {
+		display: none;
+	}
+	
+	a.btn:hover {
+		transform: skewX(0deg);
+	}
+	
+	a.btn:hover span{
+		display: inline-block;
 	}
 </style>
