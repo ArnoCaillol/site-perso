@@ -76,7 +76,7 @@
 
 <section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
   <img src="{laptop}" alt="">
-  <div class="card bg-base-100 p-8">
+  <div class="card bg-base-100 shadow-xl p-8">
     <div class="prose prose-lg mb-8 text-center max-w-full">
       <h2 class="text-3xl">Une question ?</h2>
     </div>
@@ -123,7 +123,6 @@
   }
   
   #cta .card {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     transform: perspective(1000px);
   }
