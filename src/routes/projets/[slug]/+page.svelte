@@ -1,5 +1,8 @@
 <script>
 	import emblaCarouselSvelte from 'embla-carousel-svelte'
+    import ScrollTop from '$lib/components/ScrollTop.svelte';
+
+	let y;
 	
 	export let data;
 	let emblaApi;
@@ -43,34 +46,40 @@
 <meta property="og:title" content={data.title} />
 </svelte:head>
 
-<article class="prose lg:prose-lg mx-auto p-4 mb-8">
-	<div class="flex">
-		<a href="/projets" class="btn btn-square hidden md:flex mr-1">❮</a>
-		<div>
-			<h1 class="mb-2 projet-header">{data.title}</h1>
-			<small class="text-gray-500">{data.date}</small>
-		</div>
-	</div>
-	<div class="flex items-center">
-		<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
-		<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
-			<div class="embla__container">
-				{#each images as img}
-				<div class="embla__slide flex items-center">
-					<img src={img.src} alt={img.alt} class="w-full rounded-lg object-cover" />
-				</div>
-				{/each}
+<div class="flex mx-auto justify-center h-full">
+	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {y}px">
+		<a href="/projets" class="btn btn-square">❮</a>
+	</div> 
+	<article class="prose lg:prose-lg p-4 mb-8">
+		<div class="flex">
+			<div>
+				<h1 class="mb-2 projet-header">{data.title}</h1>
+				<small class="text-gray-500">{data.date}</small>
 			</div>
 		</div>
-		<button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
-	</div>
-	<div class="flex justify-center space-x-3">
-		{#each images as img, i}
-		<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
-		{/each}
-	</div>
-	<svelte:component this={data.content} />
-</article>
+		<div class="flex items-center">
+			<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
+			<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
+				<div class="embla__container">
+					{#each images as img}
+					<div class="embla__slide flex items-center">
+						<img src={img.src} alt={img.alt} class="w-full rounded-lg object-cover" />
+					</div>
+					{/each}
+				</div>
+			</div>
+			<button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
+		</div>
+		<div class="flex justify-center space-x-3">
+			{#each images as img, i}
+			<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
+			{/each}
+		</div>
+		<svelte:component this={data.content} />
+	</article>
+	<ScrollTop />
+</div>
+<svelte:window bind:scrollY={y} />
 
 <style>
 	.embla {
@@ -90,7 +99,11 @@
 		view-transition-name: titre-projet;
 	}
 
-	a.btn-square {
-		margin-left: -3rem;
+	.divider-horizontal{
+		transition: margin 150ms;
+	}
+
+	.divider-horizontal:before {
+		height: 0 !important;
 	}
 </style>
