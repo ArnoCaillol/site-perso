@@ -129,12 +129,13 @@
 
 	.embla {
 		overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: inset 1px 1px;
 	}
 	
 	.embla__container {
 		display: flex;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 	}
 	
 	.embla__slide {
