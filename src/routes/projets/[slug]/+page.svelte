@@ -45,7 +45,7 @@
 
 <article class="prose lg:prose-lg mx-auto p-4 mb-8">
 	<div class="flex">
-		<a href="/projets" class="btn btn-square hidden md:block mr-1">❮</a>
+		<a href="/projets" class="btn btn-square hidden md:flex mr-1">❮</a>
 		<div>
 			<h1 class="mb-2 projet-header">{data.title}</h1>
 			<small class="text-gray-500">{data.date}</small>
