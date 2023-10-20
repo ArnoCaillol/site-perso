@@ -89,4 +89,8 @@
 	.projet-header {
 		view-transition-name: titre-projet;
 	}
+
+	.btn-square {
+		margin-left: -3rem;
+	}
 </style>
