@@ -24,7 +24,7 @@
 </script>
 <div class="flex justify-center">
     <div class="prose md:w-3/4 p-4">
-        <h1>Contact</h1>
+        <h1 class="text-center">Contact</h1>
         {#if form?.error}
         <p class="error">{form.error}</p>
         {/if}
