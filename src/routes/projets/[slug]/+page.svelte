@@ -100,7 +100,7 @@
 	}
 
 	.divider-horizontal{
-		transition: margin 150ms;
+		transition: margin linear 150ms;
 	}
 
 	.divider-horizontal:before {
