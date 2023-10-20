@@ -131,7 +131,6 @@
 		overflow: hidden;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    box-shadow: inset 1px 1px;
 	}
 	
 	.embla__container {
