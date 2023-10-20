@@ -53,7 +53,7 @@
 
 <div class="flex mx-auto justify-center h-full">
 	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {delayedY}px">
-		<a href="/projets" class="btn bg-[#05d797]"><span>❮</span></a>
+		<a href="/projets" class="btn btn-primary bg-[#05d797]"><span>❮</span></a>
 	</div> 
 	<article class="prose lg:prose-lg p-4 mb-8">
 		<div class="flex flex-col items-center">
