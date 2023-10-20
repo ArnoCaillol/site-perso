@@ -42,8 +42,8 @@
     <p>Some description or content for the header section can go here.</p>
   </div>
   <div class="flex items-center justify-center mb-4">
-    <button class="btn hidden md:block mr-1" on:click={scrollPrev}>❮</button>
-    <div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
+    <button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
+    <div class="embla md:border-x-2 border-black" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
       <div class="embla__container">
         {#each data.projets as projet}
         <div class="embla__slide items-center">
@@ -52,7 +52,7 @@
         {/each}
       </div>
     </div>
-    <button class="btn hidden md:block ml-1" on:click={scrollNext}>❯</button>
+    <button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
   </div>
   <div class="flex justify-center space-x-3">
     {#each data.projets as img, i}

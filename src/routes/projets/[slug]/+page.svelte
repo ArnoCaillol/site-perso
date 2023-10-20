@@ -43,7 +43,7 @@
 		</div>
 	</div>
 	<div class="flex items-center">
-		<button class="btn hidden md:block mr-1" on:click={scrollPrev}>❮</button>
+		<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
 		<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
 			<div class="embla__container">
 				{#each images as src}
@@ -53,7 +53,7 @@
 				{/each}
 			</div>
 		</div>
-		<button class="btn hidden md:block ml-1" on:click={scrollNext}>❯</button>
+		<button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
 	</div>
 	<div class="flex justify-center space-x-3">
 		{#each images as img, i}
