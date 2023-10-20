@@ -43,7 +43,7 @@
   </div>
   <div class="flex items-center justify-center mb-4">
     <button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
-    <div class="embla md:border-x-2 border-black" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
+    <div class="embla md:border-x-2 border-base-300" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
       <div class="embla__container">
         {#each data.projets as projet}
         <div class="embla__slide items-center">

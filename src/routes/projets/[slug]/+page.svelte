@@ -23,9 +23,18 @@
 	}
 	
 	let images = [
-	'https://picsum.photos/500/200',
-	'https://picsum.photos/500/300',
-	'https://picsum.photos/500/250',
+		{
+			src: 'https://picsum.photos/500/200',
+			alt: ''
+		},
+		{
+			src: 'https://picsum.photos/500/300',
+			alt: ''
+		},
+		{
+			src: 'https://picsum.photos/500/250',
+			alt: ''
+		},
 	]
 </script>
 
@@ -46,9 +55,9 @@
 		<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
 		<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
 			<div class="embla__container">
-				{#each images as src}
+				{#each images as img}
 				<div class="embla__slide flex items-center">
-					<img {src} class="w-full rounded-lg object-cover" />
+					<img src={img.src} alt={img.alt} class="w-full rounded-lg object-cover" />
 				</div>
 				{/each}
 			</div>
