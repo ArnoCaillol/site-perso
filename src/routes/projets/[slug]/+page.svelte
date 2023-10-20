@@ -3,6 +3,13 @@
 	import ScrollTop from '$lib/components/ScrollTop.svelte';
 	
 	let y;
+    let delayedY = 0;
+
+    $: if (y !== delayedY) {
+        setTimeout(() => {
+            delayedY = y;
+        }, 250);
+    }
 	
 	export let data;
 	let emblaApi;
@@ -45,7 +52,7 @@
 </svelte:head>
 
 <div class="flex mx-auto justify-center h-full">
-	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {y}px">
+	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {delayedY}px">
 		<a href="/projets" class="btn bg-[#05d797]"><span>❮</span></a>
 	</div> 
 	<article class="prose lg:prose-lg p-4 mb-8">
@@ -96,7 +103,7 @@
 	}
 	
 	.divider-horizontal{
-		transition: margin linear 150ms;
+		transition: margin ease 150ms;
 	}
 	
 	.divider-horizontal:before {
@@ -114,10 +121,8 @@
 	
 	a.btn {
 		aspect-ratio: 1;
-		transform: skewX(-10deg);
 		border-radius: 2px;
-		transition: all 150ms ease-in-out;
-		animation: initialSkew 1ms forwards; /* Short duration to set initial value */
+		animation: initialSkew 500ms forwards;
 	}
 	
 	a.btn>span {
@@ -125,7 +130,8 @@
 	}
 	
 	a.btn:hover {
-		transform: skewX(0deg);
+		animation: initialSkew;
+		animation-direction: reverse;
 	}
 	
 	a.btn:hover span{

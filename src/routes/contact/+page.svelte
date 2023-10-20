@@ -22,6 +22,12 @@
         };
     }
 </script>
+
+<svelte:head>
+<title>Arnaud Caillol - Contact</title>
+<meta property="og:title" content="Arnaud Caillol - Contact" />
+</svelte:head>
+
 <div class="flex justify-center">
     <div class="prose md:w-3/4 p-4">
         <h1 class="text-center">Contact</h1>

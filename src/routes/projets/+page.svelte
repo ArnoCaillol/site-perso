@@ -2,6 +2,12 @@
   import Projet from "$lib/components/Projet.svelte";
   export let data;
 </script>
+
+<svelte:head>
+<title>Arnaud Caillol - Projets</title>
+<meta property="og:title" content="Arnaud Caillol - Projets" />
+</svelte:head>
+
 <div class="flex flex-col items-center">
   <div class="prose lg:prose-lg text-center w-full mb-4 p-4">
     <h1>Projets</h1>

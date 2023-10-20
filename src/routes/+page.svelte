@@ -27,6 +27,12 @@
   }
   
 </script>
+
+<svelte:head>
+<title>Arnaud Caillol</title>
+<meta property="og:title" content="Arnaud Caillol" />
+</svelte:head>
+
 <section class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <img src="{logo}" class="rounded-lg shadow-2xl" alt="Arnaud Caillol"/>
