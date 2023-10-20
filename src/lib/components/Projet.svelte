@@ -8,7 +8,7 @@
 <a class="projet" href="{projet.path}" on:click={initViewTransition}>
   <div class="card card-bordered bg-base-300 shadow-md hover:shadow-xl">
     <figure>
-      <img src="https://picsum.photos/500/200">
+      <img src="https://picsum.photos/500/200" alt=''>
     </figure>
     <div class="card-body">
       <h2 class="card-title">{projet.meta.title}</h2>
