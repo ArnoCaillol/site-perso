@@ -1,6 +1,10 @@
 <script>
     import Projet from "$lib/components/Projet.svelte";
     export let data;
+
+    const loadingSpinner = (btn) => {
+        setTimeout(() => btn.target.innerHTML = '<span class="loading loading-spinner loading-xs"></span>', 200)
+    }
 </script>
 
 <svelte:head>
@@ -10,8 +14,8 @@
 
 <div class="flex flex-col items-center">
     <div class="prose lg:prose-lg text-center w-full mb-4 p-4">
-        <div class="flex justify-center space-x-2">
-            <a href="/projets" class="btn btn-primary bg-[#05d797] back">❮</a>
+        <div class="flex justify-center space-x-4">
+            <a href="/projets" class="btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
             <h1>{data.category}</h1>    
         </div>
     </div>

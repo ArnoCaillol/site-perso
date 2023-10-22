@@ -23,6 +23,10 @@
 		if(previousPage?.includes('category')) href =  previousPage;
 	});
 	
+	const loadingSpinner = (btn) => {
+        setTimeout(() => btn.target.innerHTML = '<span class="loading loading-spinner loading-xs"></span>', 200)
+    }
+
 	let emblaApi;
 	let options = { loop: true };
 	
@@ -64,12 +68,12 @@
 
 <div class="flex mx-auto justify-center h-full">
 	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {delayedY}px">
-		<a {href} class="btn btn-primary bg-[#05d797] back">❮</a>
+		<a {href} class="btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
 	</div> 
 	<article class="prose lg:prose-lg p-4 mb-8">
 		<div class="flex flex-col items-center">
-			<div class="flex justify-center space-x-2">
-				<a href={href} class="flex md:hidden btn btn-primary bg-[#05d797] back">❮</a>
+			<div class="flex justify-center space-x-4">
+				<a href={href} class="flex md:hidden btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
 				<h1 class="mb-2 projet-header">{data.title}</h1>
 			</div>
 			{#each data.categories as category}
