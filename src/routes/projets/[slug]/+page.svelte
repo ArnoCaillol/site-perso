@@ -16,10 +16,11 @@
 	
 	export let data;
 	
-	let previousPage = '/projets';
+	let href = '/projets';
 	
 	afterNavigate(({from}) => {
-		previousPage = from?.url.pathname || previousPage
+		const previousPage = from?.url.pathname;
+		if(previousPage?.includes('category')) href =  previousPage;
 	});
 	
 	let emblaApi;
@@ -63,12 +64,12 @@
 
 <div class="flex mx-auto justify-center h-full">
 	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {delayedY}px">
-		<a href={previousPage} class="btn btn-primary bg-[#05d797] back"><span>❮</span></a>
+		<a {href} class="btn btn-primary bg-[#05d797] back">❮</a>
 	</div> 
 	<article class="prose lg:prose-lg p-4 mb-8">
 		<div class="flex flex-col items-center">
 			<div class="flex justify-center space-x-2">
-				<a href={previousPage} class="flex md:hidden btn btn-primary bg-[#05d797] back"><span>❮</span></a>
+				<a href={href} class="flex md:hidden btn btn-primary bg-[#05d797] back">❮</a>
 				<h1 class="mb-2 projet-header">{data.title}</h1>
 			</div>
 			{#each data.categories as category}
@@ -140,16 +141,8 @@
 		animation: initialSkew 500ms forwards;
 	}
 	
-	.back>span {
-		visibility: hidden;
-	}
-	
 	.back:hover {
 		animation: initialSkew;
 		animation-direction: reverse;
-	}
-	
-	.back:hover span{
-		visibility: visible;
 	}
 </style>

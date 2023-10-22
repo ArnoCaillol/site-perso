@@ -11,7 +11,7 @@
 <div class="flex flex-col items-center">
     <div class="prose lg:prose-lg text-center w-full mb-4 p-4">
         <div class="flex justify-center space-x-2">
-            <a href="/projets" class="btn btn-primary bg-[#05d797] back"><span>❮</span></a>
+            <a href="/projets" class="btn btn-primary bg-[#05d797] back">❮</a>
             <h1>{data.category}</h1>    
         </div>
     </div>

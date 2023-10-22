@@ -4,8 +4,10 @@
 <li class="prose prose-lg mt-10 ml-6">
   <div class="absolute w-3 h-3 timeline-icon mt-1.5 -left-3.5 bg-[#05d797]"></div>
   <time>{experience.meta.date}</time>
-  <h3 class="mt-1">{experience.meta.title}</h3>
-  <p>{experience.meta.caption}</p>
+  <h3 class="mt-1 mb-0">{experience.meta.title}</h3>
+  {#if experience.meta.entreprise}
+  <small>{experience.meta.entreprise}</small>
+  {/if}
 </li>
 <style>
   .timeline-icon {
@@ -38,5 +40,13 @@
   
   li:hover .timeline-icon::before {
     left: 130%;
+  }
+
+  li {
+    width: fit-content;
+  }
+
+  h3 {
+    width: fit-content;
   }
 </style>

@@ -5,7 +5,7 @@ export const GET = async () => {
 	const allPosts = await fetchExperiences();
 
 	const sortedPosts = allPosts.sort((a, b) => {
-		return new Date(b.meta.date) - new Date(a.meta.date);
+		return b.meta.ordre - a.meta.ordre;
 	});
 
 	return json(sortedPosts);
