@@ -10,10 +10,8 @@
     <figure>
       <img src="https://picsum.photos/500/200" alt=''>
     </figure>
-    <div class="card-body">
+    <div class="card-body flex items-center">
       <h2 class="card-title">{projet.meta.title}</h2>
-      <time>{projet.meta.date}</time>
-      <p>{projet.meta.caption}</p>
     </div>
   </div>
 </a>

@@ -1,17 +1,28 @@
 <script>
 	import emblaCarouselSvelte from 'embla-carousel-svelte'
 	import ScrollTop from '$lib/components/ScrollTop.svelte';
+	import slugify from 'slugify';
+	import { goto, afterNavigate } from '$app/navigation';
+	import { base } from '$app/paths'
 	
+	const slugifyParams = { lower: true, remove: /[*+~.()'"!:@]/g };
 	let y;
-    let delayedY = 0;
-
-    $: if (y !== delayedY) {
-        setTimeout(() => {
-            delayedY = y;
-        }, 250);
-    }
+	let delayedY = 0;
+	
+	$: if (y !== delayedY) {
+		setTimeout(() => {
+			delayedY = y;
+		}, 250);
+	}
 	
 	export let data;
+	
+	let previousPage = '/projets';
+	
+	afterNavigate(({from}) => {
+		previousPage = from?.url.pathname || previousPage
+	});
+	
 	let emblaApi;
 	let options = { loop: true };
 	
@@ -53,12 +64,17 @@
 
 <div class="flex mx-auto justify-center h-full">
 	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {delayedY}px">
-		<a href="/projets" class="btn btn-primary bg-[#05d797]"><span>❮</span></a>
+		<a href={previousPage} class="btn btn-primary bg-[#05d797] back"><span>❮</span></a>
 	</div> 
 	<article class="prose lg:prose-lg p-4 mb-8">
 		<div class="flex flex-col items-center">
-			<h1 class="mb-2 projet-header">{data.title}</h1>
-			<small class="text-gray-500">{data.date}</small>
+			<div class="flex justify-center space-x-2">
+				<a href={previousPage} class="flex md:hidden btn btn-primary bg-[#05d797] back"><span>❮</span></a>
+				<h1 class="mb-2 projet-header">{data.title}</h1>
+			</div>
+			{#each data.categories as category}
+			<a href="/projets/category/{slugify(category, slugifyParams)}" class="btn">{category}</a>
+			{/each}
 		</div>
 		<div class="flex items-center">
 			<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
@@ -119,22 +135,22 @@
 		}
 	}
 	
-	a.btn {
+	.back {
 		aspect-ratio: 1;
 		border-radius: 2px;
 		animation: initialSkew 500ms forwards;
 	}
 	
-	a.btn>span {
-		display: none;
+	.back>span {
+		visibility: hidden;
 	}
 	
-	a.btn:hover {
+	.back:hover {
 		animation: initialSkew;
 		animation-direction: reverse;
 	}
 	
-	a.btn:hover span{
-		display: inline-block;
+	.back:hover span{
+		visibility: visible;
 	}
 </style>

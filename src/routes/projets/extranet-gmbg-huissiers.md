@@ -1,0 +1,11 @@
+---
+title: Extranet GMBG
+link: https://www.extranet-gmbg-huissiers.com
+categories:
+
+- ".NET Framework"
+---
+
+Mes premiers pas dans le monde professionel !
+
+**Nice to meet you!**
