@@ -2,8 +2,7 @@
 	import emblaCarouselSvelte from 'embla-carousel-svelte'
 	import ScrollTop from '$lib/components/ScrollTop.svelte';
 	import slugify from 'slugify';
-	import { goto, afterNavigate } from '$app/navigation';
-	import { base } from '$app/paths'
+	import { afterNavigate } from '$app/navigation';
 	
 	const slugifyParams = { lower: true, remove: /[*+~.()'"!:@]/g };
 	let y;
