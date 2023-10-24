@@ -76,6 +76,9 @@
 				<a href={href} class="flex md:hidden btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
 				<h1 class="mb-2 projet-header">{data.title}</h1>
 			</div>
+			{#if data.url}
+			<a href={data.url} class="link mb-2">{data.url}</a>
+			{/if}
 			{#each data.categories as category}
 			<a href="/projets/category/{slugify(category, slugifyParams)}" class="btn">{category}</a>
 			{/each}

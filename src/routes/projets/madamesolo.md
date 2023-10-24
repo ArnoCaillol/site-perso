@@ -1,6 +1,6 @@
 ---
 title: madamesolo
-link: https://madamesolo.com
+url: https://madamesolo.com
 categories:
 
 - "WooCommerce"

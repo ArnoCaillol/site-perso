@@ -1,6 +1,6 @@
 ---
 title: Papaya Jazz
-link: https://papayajazz.com
+url: https://papayajazz.com
 categories:
 
 - "Site vitrine"

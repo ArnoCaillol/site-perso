@@ -1,6 +1,6 @@
 ---
 title: Extranet GMBG
-link: https://www.extranet-gmbg-huissiers.com
+url: https://www.extranet-gmbg-huissiers.com
 categories:
 
 - ".NET Framework"
