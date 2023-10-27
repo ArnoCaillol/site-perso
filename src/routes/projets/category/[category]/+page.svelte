@@ -1,7 +1,7 @@
 <script>
     import Projet from "$lib/components/Projet.svelte";
     export let data;
-
+    
     const loadingSpinner = (btn) => {
         setTimeout(() => btn.target.innerHTML = '<span class="loading loading-spinner loading-xs"></span>', 200)
     }
@@ -20,11 +20,11 @@
         </div>
     </div>
     {#if data.projets && data.projets.length > 0}
-    {#each data.projets as projet}
     <div class="h-full md:h-auto p-4 w-full grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        {#each data.projets as projet}
         <Projet {projet}/>
+        {/each}
     </div>
-    {/each}
     {:else}
     <p>Désolé, aucun projet dans cette catégorie !</p>
     {/if}

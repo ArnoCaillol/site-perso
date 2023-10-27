@@ -1,7 +1,7 @@
 <script>
   import Projet from "$lib/components/Projet.svelte";
   import TimelineItem from "$lib/components/TimelineItem.svelte";
-  import logo from '$lib/assets/logo.png';
+  import moi from '$lib/assets/moi.jpg';
   import laptop from '$lib/assets/laptop.jpg';
   import emblaCarouselSvelte from 'embla-carousel-svelte'
   
@@ -35,17 +35,17 @@
 
 <section class="hero min-h-screen">
   <div class="hero-content flex-col lg:flex-row-reverse">
-    <img src="{logo}" class="rounded-lg shadow-2xl" alt="Arnaud Caillol"/>
+    <img src="{moi}" class="rounded-lg shadow-2xl" alt="Arnaud Caillol"/>
     <div>
-      <h1 class="text-5xl font-bold">Bonjour !</h1>
-      <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <h1 class="text-5xl font-bold">Bonjour 👋</h1>
+      <p class="py-6">Je m'appelle Arnaud et je suis un jeune développeur indépendant avec 3 ans d'expérience professionnelle.</p>
     </div>
   </div>
 </section>
 <section id="projets">
   <div class="prose lg:prose-lg my-8 text-center max-w-full">
     <h2 class="text-3xl">Mes projets</h2>
-    <p>Some description or content for the header section can go here.</p>
+    <small>Une petite sélection 👌</small>
   </div>
   <div class="flex items-center justify-center mb-4">
     <button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
@@ -69,6 +69,7 @@
 <section id="experiences">
   <div class="prose prose-lg my-8 text-center max-w-full">
     <h2 class="text-3xl">Expériences</h2>
+    <small>Une liste qui ne demande qu'à être agrandie 🧑‍💼</small>
   </div>
   <ul class="relative m-8 border-l border-gray-700"> 
     {#each data.experiences as experience}

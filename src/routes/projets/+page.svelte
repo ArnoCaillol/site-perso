@@ -1,8 +1,8 @@
 <script>
   import Projet from "$lib/components/Projet.svelte";
-	import slugify from 'slugify';
-	
-	const slugifyParams = { lower: true, remove: /[*+~.()'"!:@]/g };
+  import slugify from 'slugify';
+  
+  const slugifyParams = { lower: true, remove: /[*+~.()'"!:@]/g };
   export let data;
 </script>
 
@@ -14,7 +14,11 @@
 <div class="flex flex-col items-center">
   <div class="prose lg:prose-lg text-center w-full mb-4 p-4 space-x-2 space-y-2">
     <h1>Projets</h1>
-    <p class="text-gray-500">Some description or content for the header section can go here.</p>
+    <div class="card bg-base-200">
+      <div class="card-body">
+        <small class="text-justify">Voici une liste de projets auxquels j'ai participé ! J'ai pris la peine de sélectionner les plus notables et ceux où ma participation a été importante 😉</small>
+      </div>
+    </div>
     {#each data.categories as category}
     <a href="/projets/category/{slugify(category, slugifyParams)}" class="btn">{category}</a>
     {/each}
