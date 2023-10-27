@@ -3,7 +3,7 @@ title: Extranet GMBG
 url: https://www.extranet-gmbg-huissiers.com
 categories:
 
-- ".NET Framework"
+- ".NET"
 ---
 
 Mes premiers pas dans le monde professionel !

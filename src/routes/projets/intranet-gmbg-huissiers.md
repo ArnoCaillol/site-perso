@@ -2,7 +2,7 @@
 title: Extranet GMBG
 categories:
 
-- ".NET Framework"
+- ".NET"
 ---
 
 Mes premiers pas dans le monde professionel !
