@@ -6,7 +6,7 @@
   }
 </script>
 <a class="projet" href="{projet.path}" on:click={initViewTransition}>
-  <div class="card card-bordered bg-base-300 shadow-md hover:shadow-xl">
+  <div class="card card-bordered bg-base-300">
     <figure>
       <img src="https://picsum.photos/500/200" alt=''>
     </figure>
