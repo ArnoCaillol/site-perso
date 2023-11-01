@@ -73,7 +73,7 @@
 	<article class="prose lg:prose-lg p-4 mb-8">
 		<div class="flex flex-col items-center">
 			<div class="flex justify-center space-x-4">
-				<a href={href} class="flex md:hidden btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
+				<a {href} class="flex md:hidden btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
 				<h1 class="mb-2 projet-header">{data.title}</h1>
 			</div>
 			{#if data.url}
@@ -101,7 +101,9 @@
 			<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
 			{/each}
 		</div>
-		<svelte:component this={data.content} />
+		<div id="content">
+			<svelte:component this={data.content} />
+		</div>
 	</article>
 	<ScrollTop />
 </div>
@@ -151,5 +153,9 @@
 	.back:hover {
 		animation: initialSkew;
 		animation-direction: reverse;
+	}
+
+	#content {
+		text-align: justify;
 	}
 </style>

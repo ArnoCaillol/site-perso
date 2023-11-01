@@ -1,10 +1,10 @@
 ---
-title: Extranet GMBG
+title: Intranet GMBG
 categories:
 
 - ".NET"
 ---
 
-Mes premiers pas dans le monde professionel !
+## Site intranet de l'étude GMBG
 
-**Nice to meet you!**
+Une application web centralisant diverses tâches (gestion des équipes, consultation de statistiques, création d'objectifs, etc.) en un seul endroit, facilitant la vie des collaborateurs.

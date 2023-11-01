@@ -5,6 +5,6 @@ categories:
 - "Android"
 ---
 
-Mes premiers pas dans le monde professionel !
+## Application Android GMBG RFID
 
-**Nice to meet you!**
+Une application Android conçu pour lecteur RFID Zebra afin d'aider à localiser les dossiers dans la salle d'archive de l'étude GMBG.

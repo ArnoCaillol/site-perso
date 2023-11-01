@@ -6,6 +6,6 @@ categories:
 - "Site vitrine"
 ---
 
-Mon quatrième projet.
+# Site vitrine du groupe Papaya Jazz
 
-**Nice to meet you!**
+Un site, fait en pur HTML/CSS/JS, fait pour mon groupe Papaya Jazz afin de présenter nos prestations.

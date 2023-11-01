@@ -6,6 +6,13 @@ categories:
 - ".NET"
 ---
 
-Mes premiers pas dans le monde professionel !
+## Site extranet de l'étude GMBG
 
-**Nice to meet you!**
+Une application web permettant à différents acteurs, qu'ils soient débiteurs ou clients, d'effectuer diverses tâches en ligne.
+
+En terme de sécurité il a été noté 10/10 lors d'un audit effectué par la société XMCO.
+
+### Fonctionnalités du site
+- Consultation de données
+- Téléchargement de documents
+- Paiements
