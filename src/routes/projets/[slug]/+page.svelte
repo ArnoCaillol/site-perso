@@ -1,5 +1,4 @@
 <script>
-  	import 'iconify-icon'
 	import emblaCarouselSvelte from 'embla-carousel-svelte'
 	import ScrollTop from '$lib/components/ScrollTop.svelte';
 	import slugify from 'slugify';
