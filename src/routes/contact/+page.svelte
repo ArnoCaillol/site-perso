@@ -31,6 +31,18 @@
 <div class="flex justify-center">
     <div class="prose md:w-3/4 p-4">
         <h1 class="text-center">Contact</h1>
+        <div class="card bg-base-200 mb-4">
+          <div class="card-body text-center">
+            <p>Utilisez le formulaire de contact ci-dessous</p>
+            <small>Vous pouvez également me joindre par téléphone ou sur les réseaux sociaux :</small>
+            <p class="text-center">
+                <a href="tel:+33646851070"><iconify-icon icon="mdi:phone" width="24" height="24"></iconify-icon></a> 
+                <a href="https://instagram.com/arnaud.caillol"><iconify-icon icon="mdi:instagram" width="24" height="24"></iconify-icon></a> 
+                <a href="https://www.linkedin.com/in/arnaud-caillol"><iconify-icon icon="mdi:linkedin" width="24" height="24"></iconify-icon></a> 
+                <a href="https://github.com/ArnoCaillol"><iconify-icon icon="mdi:github" width="24" height="24"></iconify-icon></a> 
+            </p>
+          </div>
+        </div>
         {#if form?.error}
         <p class="error">{form.error}</p>
         {/if}
