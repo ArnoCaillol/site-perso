@@ -83,13 +83,14 @@
 			<a href="/projets/category/{slugify(category, slugifyParams)}" class="btn">{category}</a>
 			{/each}
 		</div>
+		{#if data.images && data.images.length > 0}
 		<div class="flex items-center">
 			<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
 			<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
 				<div class="embla__container">
-					{#each images as img}
+					{#each data.images as img}
 					<div class="embla__slide flex items-center">
-						<img src={img.src} alt={img.alt} class="w-full rounded-lg object-cover" />
+						<img src={img} alt={img} class="w-full rounded-lg object-cover" />
 					</div>
 					{/each}
 				</div>
@@ -97,10 +98,11 @@
 			<button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
 		</div>
 		<div class="flex justify-center space-x-3">
-			{#each images as img, i}
+			{#each data.images as img, i}
 			<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
 			{/each}
 		</div>
+		{/if}
 		<div id="content">
 			<svelte:component this={data.content} />
 		</div>
@@ -116,13 +118,23 @@
 	
 	.embla__container {
 		display: flex;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 	
 	.embla__slide {
 		flex: 0 0 100%;
 		min-width: 0;
+		max-height: 400px;  /* or whatever value you prefer */
+		align-items: center;  /* This will vertically center the image within the container */
+		justify-content: center;
 	}
-	
+
+	.embla__slide img {
+		max-height: 100%;  /* This ensures that the image won't be larger than its container */
+		width: auto;  /* This maintains the aspect ratio */
+	}
+
 	.projet-header {
 		view-transition-name: titre-projet;
 	}
