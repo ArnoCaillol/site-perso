@@ -23,7 +23,7 @@
     <a href="/projets/category/{slugify(category, slugifyParams)}" class="btn">{category}</a>
     {/each}
   </div>
-  <div class="h-full md:h-auto p-4 w-full grid justify-items-center	grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+  <div class="h-full md:h-auto p-4 w-full grid justify-items-center	grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
     {#each data.projets as projet}
     <Projet {projet}/>
     {/each}
