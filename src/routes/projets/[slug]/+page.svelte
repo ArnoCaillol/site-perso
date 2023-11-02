@@ -1,4 +1,5 @@
 <script>
+  	import 'iconify-icon'
 	import emblaCarouselSvelte from 'embla-carousel-svelte'
 	import ScrollTop from '$lib/components/ScrollTop.svelte';
 	import slugify from 'slugify';
@@ -44,21 +45,6 @@
 	const scrollPrev = () => emblaApi.scrollPrev();
 	const scrollNext = () => emblaApi.scrollNext();
 	const scrollTo = (index) => emblaApi.scrollTo(index);
-	
-	let images = [
-	{
-		src: 'https://picsum.photos/500/200',
-		alt: ''
-	},
-	{
-		src: 'https://picsum.photos/500/300',
-		alt: ''
-	},
-	{
-		src: 'https://picsum.photos/500/250',
-		alt: ''
-	},
-	]
 </script>
 
 <svelte:head>
@@ -78,6 +64,9 @@
 			</div>
 			{#if data.url}
 			<a href={data.url} class="link mb-2">{data.url}</a>
+			{/if}
+			{#if data.repo}
+			<a href={data.repo} class="link mb-2">Code source</a>
 			{/if}
 			{#each data.categories as category}
 			<a href="/projets/category/{slugify(category, slugifyParams)}" class="btn">{category}</a>
