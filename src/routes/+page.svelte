@@ -69,7 +69,7 @@
 <section id="experiences">
   <div class="prose prose-lg my-8 text-center max-w-full">
     <h2 class="text-3xl">Expériences</h2>
-    <small>Une liste qui ne demande qu'à être agrandie 🧑‍💼</small>
+    <small>Une liste qui ne demande qu'à grandir 🧑‍💼</small>
   </div>
   <ul class="relative m-8 border-l border-gray-700"> 
     {#each data.experiences as experience}
