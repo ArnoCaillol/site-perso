@@ -2,8 +2,10 @@
 title: Extranet GMBG
 url: https://www.extranet-gmbg-huissiers.com
 categories:
-
 - ".NET"
+images:
+- "/assets/projets/extranet-gmbg-huissiers/screenshot1.png"
+- "/assets/projets/extranet-gmbg-huissiers/screenshot2.png"
 ---
 
 ## Site extranet de l'étude GMBG

@@ -13,7 +13,7 @@
 				img.onload = () => {
 					loaded.set(data.src, img);
 					node.setAttribute('src', data.src);
-          document.querySelector('.loading')?.classList.add('hidden');
+          node.parentNode.childNodes[2]?.classList.add('hidden');
 				};
 			}, 2000);
 		}

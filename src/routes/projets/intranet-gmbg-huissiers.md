@@ -1,8 +1,9 @@
 ---
 title: Intranet GMBG
 categories:
-
 - ".NET"
+images:
+- "/assets/projets/intranet-gmbg-huissiers/screenshot1.png"
 ---
 
 ## Site intranet de l'étude GMBG

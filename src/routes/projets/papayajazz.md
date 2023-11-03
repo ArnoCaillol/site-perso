@@ -3,8 +3,10 @@ title: Papaya Jazz
 url: https://papayajazz.com
 repo: https://github.com/ArnoCaillol/papayajazz
 categories:
-
 - "Site vitrine"
+images:
+- "/assets/projets/papayajazz/screenshot1.png"
+- "/assets/projets/papayajazz/screenshot2.png"
 ---
 
 ## Site vitrine du groupe Papaya Jazz
