@@ -1,28 +1,25 @@
 <script>
   export let projet;
-	const loaded = new Map();
-
+  const loaded = new Map();
+  
   function lazy(node, data) {
-		if (loaded.has(data.src)) {
-			node.setAttribute('src', data.src);
-		} else {
-			// simulate slow loading network
-			setTimeout(() => {
-				const img = new Image();
-				img.src = data.src;
-				img.onload = () => {
-					loaded.set(data.src, img);
-					node.setAttribute('src', data.src);
-          node.parentNode.childNodes[2]?.classList.add('hidden');
-				};
-			}, 2000);
-		}
-
-		return {
-			destroy(){} // noop
-		};
-	}
-
+    if (loaded.has(data.src)) {
+      node.setAttribute('src', data.src);
+    } else {
+      const img = new Image();
+      img.src = data.src;
+      img.onload = () => {
+        loaded.set(data.src, img);
+        node.setAttribute('src', data.src);
+        node.parentNode.childNodes[2]?.classList.add('hidden');
+      };
+    }
+    
+    return {
+      destroy(){} // noop
+    };
+  }
+  
   function initViewTransition(e){
     e.target.style.viewTransitionName = 'titre-projet'
   }
@@ -68,7 +65,7 @@
     opacity: 1;
     transform: translateX(0);
   }
-
+  
   .loading {
     position: absolute;
     top: 50%;
