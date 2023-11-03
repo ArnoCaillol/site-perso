@@ -1,13 +1,27 @@
 <script>
   export let projet;
+	const loaded = new Map();
 
-  let src = '/assets/placeholder.jpg';
-  let hidden = '';
-  if (projet && projet.meta && projet.meta.images && projet.meta.images.length) {
-    src = projet.meta.images[0];
-  }
-  
-  hidden = 'hidden';
+  function lazy(node, data) {
+		if (loaded.has(data.src)) {
+			node.setAttribute('src', data.src);
+		} else {
+			// simulate slow loading network
+			setTimeout(() => {
+				const img = new Image();
+				img.src = data.src;
+				img.onload = () => {
+					loaded.set(data.src, img);
+					node.setAttribute('src', data.src);
+          document.querySelector('.loading')?.classList.add('hidden');
+				};
+			}, 2000);
+		}
+
+		return {
+			destroy(){} // noop
+		};
+	}
 
   function initViewTransition(e){
     e.target.style.viewTransitionName = 'titre-projet'
@@ -16,8 +30,12 @@
 <a class="projet" href="{projet.path}" on:click={initViewTransition}>
   <div class="card card-bordered bg-base-300">
     <figure>
-      <img {src} alt={projet.meta.title}>
-      <span class="loading loading-spinner loading-lg {hidden}"></span>
+      {#if projet && projet.meta && projet.meta.images && projet.meta.images.length}
+      <img src="/assets/placeholder.jpg" loading="lazy" use:lazy="{{src: projet.meta.images[0]}}" alt={projet.meta.title}>
+      <span class="loading loading-spinner loading-lg"></span>
+      {:else}
+      <img src="/assets/placeholder.jpg" loading="lazy" alt={projet.meta.title}>
+      {/if}
     </figure>
     <div class="card-body flex items-center">
       <h2 class="card-title">{projet.meta.title}</h2>
