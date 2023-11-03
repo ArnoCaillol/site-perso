@@ -43,7 +43,7 @@
 <style>
   .card {
     transition: .5s;
-    width: 30rem;
+    max-width: 30rem;
   }
   
   .card:hover {
