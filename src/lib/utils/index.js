@@ -1,3 +1,10 @@
+export const fetchAll = async () => {
+	return {
+		projets: await fetchProjets(),
+		experiences: await fetchExperiences()
+	}
+};
+
 export const fetchProjets = async () => {
 	const allPostFiles = import.meta.glob('/src/routes/projets/*.md');
 	return await fetchDataFromFiles(allPostFiles);

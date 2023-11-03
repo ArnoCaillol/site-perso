@@ -1,12 +1,9 @@
 export const load = async ({ fetch }) => {
-    const fetchProjets = await fetch(`/api/projets`);
-    const projets = await fetchProjets.json();
-
-    const fetchExperiences = await fetch(`/api/experiences`);
-    const experiences = await fetchExperiences.json();
+    const fetchData = await fetch(`/api/data`);
+    const data = await fetchData.json();
 
     return {
-        projets,
-        experiences,
+        projets: data.projets,
+        experiences: data.experiences,
     };
 };
