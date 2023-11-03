@@ -15,8 +15,9 @@
                 const toastSuccess = document.getElementById('success');
                 toastSuccess.classList.remove('hidden');
                 setTimeout(() => toastSuccess.classList.add('hidden'), 3000);
+                [...document.forms[0].elements].forEach(e => e.disabled = false);
+                document.forms[0].reset();
             } else {
-                console.log()
                 const toastError = document.getElementById('error');
             }
         };
@@ -71,9 +72,9 @@
 </div>
 <div class="toast toast-bottom toast-center">
     <div id="success" class="alert alert-success hidden">
-        <span>Message sent successfully.</span>
+        <span>Message envoyé avec succès !</span>
     </div>
     <div id="error" class="alert alert-error hidden">
-        <span class="message">Error while sending the message.</span>
+        <span class="message">Erreur lors de l'envoi du message</span>
     </div>
 </div>
