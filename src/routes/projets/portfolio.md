@@ -12,4 +12,4 @@ images:
 
 Il a été conçu avec Sveltekit et DaisyUI, en utilisant des fichiers Markdown pour stocker mes projets et expériences (à la manière d'un SSG).
 
-J'utilise Netlify pour le déploiement et l'hébergement du site (je push, ça déploie, moins de tracas 😁).
+J'utilise Netlify pour le déploiement et l'hébergement (je push, ça déploie, moins de tracas 😁).
