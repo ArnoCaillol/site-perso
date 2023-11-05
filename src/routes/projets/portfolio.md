@@ -3,8 +3,9 @@ title: Portfolio
 url: https://acaillol.com
 repo: https://github.com/ArnoCaillol/site-perso
 categories:
-
 - "Sveltekit"
+images:
+- "/assets/projets/portfolio/screenshot1.png"
 ---
 
 ## Le site que vous êtes en train de consulter 😉

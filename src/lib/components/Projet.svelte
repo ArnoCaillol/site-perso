@@ -26,7 +26,7 @@
 </script>
 <a class="projet" href="{projet.path}" on:click={initViewTransition}>
   <div class="card card-bordered bg-base-300">
-    <figure>
+    <figure class="bg-base-200">
       {#if projet && projet.meta && projet.meta.images && projet.meta.images.length}
       <img src="/assets/placeholder.jpg" loading="lazy" use:lazy="{{src: projet.meta.images[0]}}" alt={projet.meta.title}>
       <span class="loading loading-spinner loading-lg"></span>
