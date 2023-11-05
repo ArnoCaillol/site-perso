@@ -78,9 +78,9 @@
 			{/if}
 			<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
 				<div class="embla__container">
-					{#each data.images as img}
+					{#each data.images as img,i}
 					<div class="embla__slide flex items-center">
-						<img src={img} alt={img} class="w-full rounded-lg object-cover" />
+						<img src={img} alt="screenshot{i+1}" class="w-full rounded-lg object-cover max-h-12" />
 					</div>
 					{/each}
 				</div>
@@ -119,7 +119,7 @@
 	.embla__slide {
 		flex: 0 0 100%;
 		min-width: 0;
-		max-height: 400px;  /* or whatever value you prefer */
+		max-height: 350px;  /* or whatever value you prefer */
 		align-items: center;  /* This will vertically center the image within the container */
 		justify-content: center;
 	}
