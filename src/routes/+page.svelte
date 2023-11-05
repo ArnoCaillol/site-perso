@@ -34,11 +34,14 @@
 </svelte:head>
 
 <section class="hero min-h-screen">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    <img src="{moi}" class="rounded-lg shadow-2xl" alt="Arnaud Caillol"/>
+  <div class="hero-content flex-col lg:flex-row-reverse lg:mx-24">
+    <img src="{moi}" class="rounded-lg shadow-2xl w-60 sm:w-52" alt="Arnaud Caillol"/>
     <div>
-      <h1 class="text-5xl font-bold">Bonjour 👋</h1>
-      <p class="py-6">Je m'appelle Arnaud et je suis un jeune développeur indépendant avec 3 ans d'expérience professionnelle.</p>
+      <h1 class="text-center lg:text-left text-5xl font-bold">Bonjour 👋</h1>
+      <p class="py-6 text-xl font-bold">Je suis Arnaud, <em>développeur indépendant</em> doté d'une licence professionnelle avec <em>trois ans d'expérience professionnelle</em>.</p>
+      <p class="text-justify py-2"><strong>Curieux</strong> et parfois réservé, je ne recule jamais devant un <strong>nouveau défi</strong> 😊.</p>
+      <p class="text-justify py-2"><strong>Trilingue</strong>, je tire profit de cette compétence autant dans les contenus que je consulte (texte, audio ou vidéo) que dans les <strong>opportunités professionnelles</strong> qui m'ont mené, entre autres, à réaliser <strong>deux stages au Brésil</strong>.</p>
+      <p class="text-justify py-2">Je suis fier de mes <strong>convictions</strong>, tout en valorisant profondément le <strong>respect</strong> et l'<strong>ouverture d'esprit</strong>.</p>
     </div>
   </div>
 </section>

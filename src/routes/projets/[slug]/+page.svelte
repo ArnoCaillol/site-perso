@@ -73,7 +73,9 @@
 		</div>
 		{#if data.images && data.images.length > 0}
 		<div class="flex items-center">
+			{#if data.images && data.images.length > 1}
 			<button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
+			{/if}
 			<div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
 				<div class="embla__container">
 					{#each data.images as img}
@@ -83,13 +85,17 @@
 					{/each}
 				</div>
 			</div>
+			{#if data.images && data.images.length > 1}
 			<button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
+			{/if}
 		</div>
+		{#if data.images && data.images.length > 1}
 		<div class="flex justify-center space-x-3">
 			{#each data.images as img, i}
 			<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
 			{/each}
 		</div>
+		{/if}
 		{/if}
 		<div id="content">
 			<svelte:component this={data.content} />
