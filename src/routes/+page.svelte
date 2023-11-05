@@ -39,7 +39,7 @@
     <div>
       <h1 class="text-center lg:text-left text-5xl font-bold">Bonjour 👋</h1>
       <p class="py-6 text-xl font-bold">Je suis Arnaud, <em>développeur freelance</em> doté d'une licence avec <em>trois ans d'expérience professionnelle</em>.</p>
-      <p class="text-justify py-2"><strong>Curieux</strong> et parfois réservé, je ne recule jamais devant un <strong>nouveau défi</strong> 😊.</p>
+      <p class="text-justify py-2"><strong>Passionné</strong> et <strong>Curieux</strong>, je ne recule jamais devant un <strong>nouveau défi</strong> 😊.</p>
       <p class="text-justify py-2"><strong>Trilingue</strong>, je tire profit de cette compétence autant dans les contenus que je consulte (texte, audio ou vidéo) que dans les <strong>opportunités professionnelles</strong> qui m'ont mené, entre autres, à réaliser <strong>deux stages au Brésil</strong>.</p>
       <p class="text-justify py-2">Je suis fier de mes <strong>convictions</strong>, tout en valorisant profondément le <strong>respect</strong> et l'<strong>ouverture d'esprit</strong>.</p>
     </div>
