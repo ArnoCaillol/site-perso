@@ -60,12 +60,7 @@
                 <label for="message" class="block text-lg mb-3">Message</label>
                 <textarea id="message" name="message" placeholder="Votre Message" rows="5" class="textarea textarea-bordered w-full text-lg" required></textarea>
             </div>
-            <div class="mb-6 flex align-center gap-4">
-                <button type="submit" class="btn btn-primary">
-                    Envoyer
-                </button>
-                <span class="loading loading-spinner transition-opacity duration-500 ease-in opacity-0"></span>
-            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
     </div>
 </div>
