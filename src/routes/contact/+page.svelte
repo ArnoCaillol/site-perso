@@ -53,7 +53,7 @@
             </div>
             <div class="mb-6">
                 <label for="email" class="block text-lg mb-3">Email</label>
-                <input type="email" id="email" name="email" value={form?.email ?? ''}
+                <input type="email" id="email" name="email"
                 placeholder="Votre Email" class="input input-bordered w-full text-lg">
             </div>
             <div class="mb-6">
