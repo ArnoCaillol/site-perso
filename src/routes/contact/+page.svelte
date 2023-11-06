@@ -46,7 +46,7 @@
         <!-- {#if form?.error}
         <p class="error">{form.error}</p>
         {/if} -->
-        <form name="contact" method="post" netlify>
+        <form name="contact" method="POST" data-netlify="true">
             <div class="mb-6">
                 <label for="name">Nom</label>
                 <input type="text" id="name" name="name" placeholder="Votre Nom" class="input input-bordered w-full text-lg" required>
