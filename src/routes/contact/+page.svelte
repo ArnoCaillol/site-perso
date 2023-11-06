@@ -1,26 +1,26 @@
 <script>
-    import { enhance } from '$app/forms';
+    // import { enhance } from '$app/forms';
     
     export let form;
     
-    const handleEnhance = ({ formElement, formData, action, cancel }) => {
-        [...document.forms[0].elements].forEach(e => e.disabled = true);
+    // const handleEnhance = ({ formElement, formData, action, cancel }) => {
+    //     [...document.forms[0].elements].forEach(e => e.disabled = true);
         
-        document.querySelector('.loading').classList.remove('opacity-0')
-        return async ({ result }) => {
-            [...document.forms[0].elements].forEach(e => e.disabled = true);
-            document.querySelector('.loading').classList.add('opacity-0');
-            if(result.type === 'success'){
-                const toastSuccess = document.getElementById('success');
-                toastSuccess.classList.remove('hidden');
-                setTimeout(() => toastSuccess.classList.add('hidden'), 3000);
-                [...document.forms[0].elements].forEach(e => e.disabled = false);
-                document.forms[0].reset();
-            } else {
-                const toastError = document.getElementById('error');
-            }
-        };
-    }
+    //     document.querySelector('.loading').classList.remove('opacity-0')
+    //     return async ({ result }) => {
+    //         [...document.forms[0].elements].forEach(e => e.disabled = true);
+    //         document.querySelector('.loading').classList.add('opacity-0');
+    //         if(result.type === 'success'){
+    //             const toastSuccess = document.getElementById('success');
+    //             toastSuccess.classList.remove('hidden');
+    //             setTimeout(() => toastSuccess.classList.add('hidden'), 3000);
+    //             [...document.forms[0].elements].forEach(e => e.disabled = false);
+    //             document.forms[0].reset();
+    //         } else {
+    //             const toastError = document.getElementById('error');
+    //         }
+    //     };
+    // }
 </script>
 
 <svelte:head>
@@ -43,9 +43,9 @@
             </p>
           </div>
         </div>
-        {#if form?.error}
+        <!-- {#if form?.error}
         <p class="error">{form.error}</p>
-        {/if}
+        {/if} -->
         <form name="contact" method="post" data-netlify="true">
             <div class="mb-6">
                 <label for="name">Nom</label>
