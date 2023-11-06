@@ -1,7 +1,7 @@
 <script>
     // import { enhance } from '$app/forms';
     
-    export let form;
+    // export let form;
     
     // const handleEnhance = ({ formElement, formData, action, cancel }) => {
     //     [...document.forms[0].elements].forEach(e => e.disabled = true);
@@ -64,11 +64,11 @@
         </form>
     </div>
 </div>
-<div class="toast toast-bottom toast-center">
+<!-- <div class="toast toast-bottom toast-center">
     <div id="success" class="alert alert-success hidden">
         <span>Message envoyé avec succès !</span>
     </div>
     <div id="error" class="alert alert-error hidden">
         <span class="message">Erreur lors de l'envoi du message</span>
     </div>
-</div>
+</div> -->
