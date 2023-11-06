@@ -1,5 +1,4 @@
 <script>
-    import { fly, slide } from 'svelte/transition';
     import { enhance } from '$app/forms';
     
     export let form;
@@ -47,7 +46,7 @@
         {#if form?.error}
         <p class="error">{form.error}</p>
         {/if}
-        <form method="post" use:enhance={handleEnhance}>
+        <form name="contact" method="post" data-netlify="true">
             <div class="mb-6">
                 <label for="name">Nom</label>
                 <input type="text" id="name" name="name" placeholder="Votre Nom" class="input input-bordered w-full text-lg" required>
