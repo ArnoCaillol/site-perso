@@ -46,7 +46,7 @@
         <!-- {#if form?.error}
         <p class="error">{form.error}</p>
         {/if} -->
-        <form name="contact" action="/contact" method="POST" data-netlify="true">
+        <form name="contact" action="/contact" method="POST" netlify>
             <input type="hidden" name="contact" value="contact">
             <div class="mb-6">
                 <label for="name">Nom</label>
