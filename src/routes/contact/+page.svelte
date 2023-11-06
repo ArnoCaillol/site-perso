@@ -10,17 +10,18 @@
             body: new URLSearchParams(formData).toString(),
         })
         .then(() => {
+            [...document.forms[0].elements].forEach(e => e.disabled = false)
             document.forms[0].reset();
             const toastSuccess = document.getElementById('success');
             toastSuccess.classList.remove('hidden');
             setTimeout(() => toastSuccess.classList.add('hidden'), 3000);
         })
         .catch((error) => {
+            [...document.forms[0].elements].forEach(e => e.disabled = false)
             const toastError = document.getElementById('error');
             toastError.classList.remove('hidden');
             setTimeout(() => toastError.classList.add('hidden'), 3000);
-        })
-        .complete(() => [...document.forms[0].elements].forEach(e => e.disabled = false));
+        });
     };
 </script>
 
