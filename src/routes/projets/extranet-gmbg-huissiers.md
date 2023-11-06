@@ -12,6 +12,8 @@ images:
 
 Une application web permettant à différents acteurs, qu'ils soient débiteurs ou clients, d'effectuer diverses tâches en ligne.
 
+J'ai également mis en place des workflows dans les Actions GitHub du projet afin de mieux organiser et fluidifier le processus de déploiement ainsi que de créer des backups à intervalles réguliers.
+
 En terme de sécurité il a été noté 10/10 lors d'un audit effectué par la société XMCO.
 
 ### Fonctionnalités du site
