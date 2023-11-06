@@ -42,7 +42,7 @@
       <p class="text-justify py-2">Je suis <strong>développeur freelance</strong> avec une licence professionnelle et <strong>plusieurs années d'expérience professionnelle</strong> au cours desquelles j'ai eu le plaisir de travailler pour des clients issus de <em>divers marchés</em> et ayant des <em>besoins variés</em>.</p>
       <p class="text-justify py-2">Ma <em>curiosité</em>, mon intérêt pour l'<em>innovation</em> et les <em>nouveaux défis</em> m'ont conduit à maîtriser l'<em>anglais</em> et le <em>portugais</em>, ce qui m'a offert des <em>opportunités professionnelles enrichissantes</em>, mettant en avant mon <em>adaptabilité</em> et mon <em>ouverture d'esprit</em>.</p>
       <p class="text-justify py-2">J'ai effectué deux stages au <em>Brésil</em>, aux côtés d'une agence de marketing <em>dynamique</em> et <em>influente</em> de la région.</p>
-      <p class="text-justify py-2">De retour en France, j'ai bénéficié de la confiance de clients chers, en transformant ainsi leurs <em>projets</em> en <em>réalité</em> et répondant à leurs <em>besoins</em> avec <em>satisfaction</em>.</p>
+      <p class="text-justify py-2">De retour en France, j'ai eu la chance de collaborer avec des clients en transformant ainsi leurs <em>projets</em> en <em>réalité</em> et répondant à leurs <em>besoins</em> avec <em>satisfaction</em>.</p>
       <p class="text-justify py-2">Mon bagage professionnel et personnel me confère une <em>compétence particulière</em> dans la <em>résolution de problèmes</em> et une soif de nouveaux défis. Confiez-moi votre projet, et ensemble, nous le réaliserons avec <em>succès</em>.</p>
     </div>
   </div>
