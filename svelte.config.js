@@ -20,7 +20,13 @@ const config = {
 		}),
 		mdsvex({
 			extensions: ['.md']
-		})]
+		})],
+		prerender: {
+			crawl: true,
+			enabled: true,
+			force: true,
+			pages: ['*']
+		}
 };
 
 export default config;
