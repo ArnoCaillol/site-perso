@@ -9,7 +9,8 @@
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
         })
-        .then(() => {
+        .then((response) => {
+            console.log(response);
             [...document.forms[0].elements].forEach(e => e.disabled = false)
             document.forms[0].reset();
             const toastSuccess = document.getElementById('success');
