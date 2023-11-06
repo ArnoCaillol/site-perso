@@ -4,7 +4,7 @@
         const myForm = e.target;
         const formData = new FormData(myForm);
         
-        fetch("/contact", {
+        fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
@@ -45,7 +45,7 @@
                 </p>
             </div>
         </div>
-        <form action="/contact" name="contact" method="POST" netlify-honeypot="bot-field" netlify on:submit|preventDefault={handleSubmit}>
+        <form action="/" name="contact" method="POST" netlify-honeypot="bot-field" netlify on:submit|preventDefault={handleSubmit}>
             <input type="hidden" name="contact" value="contact">
             <div class="mb-6">
                 <label for="name">Nom</label>
