@@ -45,7 +45,7 @@
                 </p>
             </div>
         </div>
-        <form name="contact" method="POST" netlify-honeypot="bot-field" netlify on:submit|preventDefault={handleSubmit}>
+        <form action="/" name="contact" method="POST" netlify-honeypot="bot-field" netlify on:submit|preventDefault={handleSubmit}>
             <input type="hidden" name="contact" value="contact">
             <div class="mb-6">
                 <label for="name">Nom</label>
