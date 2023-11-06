@@ -46,7 +46,7 @@
         <!-- {#if form?.error}
         <p class="error">{form.error}</p>
         {/if} -->
-        <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
+        <form name="contact" action="/success" method="POST" netlify-honeypot="bot-field" netlify>
             <input type="hidden" name="contact" value="contact">
             <div class="mb-6">
                 <label for="name">Nom</label>
