@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/assets/logo.png';
+	import logo from '$lib/assets/logo-header.png';
 	import Switch from './Switch.svelte'
 </script>
 <header class="sticky top-0 z-50 navbar bg-base-100 shadow-md">
