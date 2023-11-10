@@ -9,20 +9,8 @@
   let emblaApi;
   let options = { loop: true };
   
-  const onInit = (event) => {
-    emblaApi = event.detail;
-    
-    emblaApi.on('select', () => {
-      const dots = document.querySelectorAll('.dot');
-      dots[emblaApi.previousScrollSnap()].classList.remove('bg-[#05d797]');
-      dots[emblaApi.previousScrollSnap()].classList.add('bg-base-300');
-      dots[emblaApi.selectedScrollSnap()].classList.remove('bg-base-300');
-      dots[emblaApi.selectedScrollSnap()].classList.add('bg-[#05d797]');
-    });
-  }
   const scrollPrev = () => emblaApi.scrollPrev();
   const scrollNext = () => emblaApi.scrollNext();
-  
 </script>
 
 <svelte:head>
@@ -51,7 +39,7 @@
   </div>
   <div class="flex items-center justify-center mb-4">
     <button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
-    <div class="embla md:border-x-2 border-base-300" use:emblaCarouselSvelte="{{ options }}" on:emblaInit="{onInit}">
+    <div class="embla md:border-x-2 border-base-300" use:emblaCarouselSvelte="{{ options }}">
       <div class="embla__container">
         {#each data.projets as projet}
         <div class="embla__slide items-center">
@@ -61,11 +49,6 @@
       </div>
     </div>
     <button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
-  </div>
-  <div class="flex justify-center space-x-3">
-    {#each data.projets as img, i}
-    <div class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-[#05d797]' : 'bg-base-300'}"></div>
-    {/each}
   </div>
 </section>
 <section id="experiences">
