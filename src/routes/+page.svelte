@@ -14,10 +14,10 @@
     
     emblaApi.on('select', () => {
       const dots = document.querySelectorAll('.dot');
-      dots[emblaApi.previousScrollSnap()].classList.remove('bg-base-300');
-      dots[emblaApi.previousScrollSnap()].classList.add('bg-base-200');
-      dots[emblaApi.selectedScrollSnap()].classList.remove('bg-base-200');
-      dots[emblaApi.selectedScrollSnap()].classList.add('bg-base-300');
+      dots[emblaApi.previousScrollSnap()].classList.remove('bg-[#05d797]');
+      dots[emblaApi.previousScrollSnap()].classList.add('bg-base-300');
+      dots[emblaApi.selectedScrollSnap()].classList.remove('bg-base-300');
+      dots[emblaApi.selectedScrollSnap()].classList.add('bg-[#05d797]');
     });
   }
   const scrollPrev = () => emblaApi.scrollPrev();
@@ -64,7 +64,7 @@
   </div>
   <div class="flex justify-center space-x-3">
     {#each data.projets as img, i}
-    <button type="button" class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
+    <button type="button" class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-[#05d797]' : 'bg-base-300'}"></button>
     {/each}
   </div>
 </section>
