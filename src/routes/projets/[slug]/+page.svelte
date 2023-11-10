@@ -48,7 +48,7 @@
 
 <svelte:head>
 <title>Arnaud Caillol - {data.title}</title>
-<meta property="og:title" content={data.title} />
+<meta property="og:title" content="Arnaud Caillol - {data.title}" />
 </svelte:head>
 
 <div class="flex mx-auto justify-center h-full">

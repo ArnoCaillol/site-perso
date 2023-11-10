@@ -29,8 +29,8 @@
 </script>
 
 <svelte:head>
-<title>Arnaud Caillol</title>
-<meta property="og:title" content="Arnaud Caillol" />
+<title>Arnaud Caillol - Développeur Freelance</title>
+<meta property="og:title" content="Arnaud Caillol - Développeur Freelance" />
 </svelte:head>
 
 <section class="hero min-h-screen">
