@@ -43,7 +43,6 @@
 	}
 	const scrollPrev = () => emblaApi.scrollPrev();
 	const scrollNext = () => emblaApi.scrollNext();
-	const scrollTo = (index) => emblaApi.scrollTo(index);
 </script>
 
 <svelte:head>
@@ -92,7 +91,7 @@
 		{#if data.images && data.images.length > 1}
 		<div class="flex justify-center space-x-3">
 			{#each data.images as img, i}
-			<button type="button" on:click={() => scrollTo(i)} class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
+			<button type="button" class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-base-300' : 'bg-base-200'}"></button>
 			{/each}
 		</div>
 		{/if}
