@@ -91,7 +91,7 @@
 		{#if data.images && data.images.length > 1}
 		<div class="flex justify-center space-x-3">
 			{#each data.images as img, i}
-			<button type="button" class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-[#05d797]' : 'bg-base-300'}"></button>
+			<div class="w-3 h-3 rounded-full dot {i == 0 ? 'bg-[#05d797]' : 'bg-base-300'}"></div>
 			{/each}
 		</div>
 		{/if}
