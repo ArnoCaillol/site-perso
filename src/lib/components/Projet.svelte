@@ -31,7 +31,7 @@
       <img src="/assets/placeholder.jpg" loading="lazy" use:lazy="{{src: projet.meta.images[0]}}" alt={projet.meta.title}>
       <span class="loading loading-spinner loading-lg"></span>
       {:else}
-      <img src="/assets/placeholder.jpg" loading="lazy" alt={projet.meta.title}>
+      <div class="skeleton w-full h-full"></div>
       {/if}
     </figure>
     <div class="card-body flex items-center">
