@@ -18,7 +18,7 @@
 <meta property="og:title" content="Arnaud Caillol - Développeur Freelance" />
 </svelte:head>
 
-<section class="hero min-h-screen">
+<section class="hero py-20">
   <div class="hero-content flex-col lg:flex-row-reverse lg:mx-24">
     <img src="{moi}" width="240" height="311" class="rounded-lg shadow-2xl sm:w-52" alt="Arnaud Caillol"/>
     <div>
