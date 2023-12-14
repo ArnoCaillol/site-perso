@@ -30,7 +30,7 @@
 			scaleMobile: 1.00,
 			color: 0x272935,
 			shininess: 10.00,
-			waveHeight: 10.00,
+			waveHeight: 20.00,
 			zoom: 1
 		})
 	});
@@ -39,7 +39,7 @@
 
 <Header />
 <div id="waves">
-	<div id="overlay" class="backdrop-blur" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+	<div id="overlay" class="backdrop-blur-sm" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
 </div>
 {#key data.currentRoute}
 <main id="main" class="container mx-auto min-h-screen">
