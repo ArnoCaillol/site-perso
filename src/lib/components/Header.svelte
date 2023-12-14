@@ -4,8 +4,9 @@
 </script>
 <header class="sticky top-0 z-50 navbar bg-base-100 shadow-md">
 	<div class="flex-1">
-		<a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/" class="btn btn-ghost normal-case text-xl"><img src="{logo}" width="47" height="47" alt="Arnaud Caillol"></a>
-		<span class="hidden md:block text-xl ml-2">Arnaud Caillol</span>
+		<a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/" class="btn btn-ghost normal-case text-xl"><img src="{logo}" width="47" height="47" alt="Arnaud Caillol">
+			<span class="text-xl font-bold ml-2">Arnaud Caillol</span>
+		</a>
 	</div>
 	<nav class="flex-none">
 		<ul class="menu menu-horizontal items-center px-1 hidden md:inline-flex">

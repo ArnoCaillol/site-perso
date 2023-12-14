@@ -12,7 +12,7 @@
 </svelte:head>
 
 <section class="py-20" id="experiences">
-    <div class="prose prose-lg my-8 text-center mx-auto">
+    <div class="prose prose-lg my-8 p-4 text-center mx-auto">
         <h1>Expériences</h1>
         <div class="card bg-base-200">
             <div class="card-body">
