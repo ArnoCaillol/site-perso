@@ -18,10 +18,9 @@
 			});
 		});
 	});
-	let vantaEffect;
 	
 	onMount(() => {
-		vantaEffect = WAVES({
+		WAVES({
 			el: "#waves",
 			mouseControls: true,
 			touchControls: true,
@@ -34,6 +33,7 @@
 			zoom: 1
 		})
 	});
+	
 	export let data;
 </script>
 
