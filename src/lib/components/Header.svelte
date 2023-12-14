@@ -9,7 +9,7 @@
 		</a>
 	</div>
 	<nav class="flex-none">
-		<ul class="menu lg:text-lg menu-horizontal items-center px-1 hidden md:inline-flex">
+		<ul class="menu lg:menu-lg menu-horizontal items-center px-1 hidden md:inline-flex">
 			<li><a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/">Introduction</a></li>
 			<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
 			<li><a aria-current={$page.url.pathname.startsWith('/experiences') ? 'page' : undefined} href="/experiences">Expériences</a></li>
