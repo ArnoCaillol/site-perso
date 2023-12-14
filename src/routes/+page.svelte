@@ -1,16 +1,6 @@
 <script>
-  import Projet from "$lib/components/Projet.svelte";
-  import TimelineItem from "$lib/components/TimelineItem.svelte";
   import moi from '$lib/assets/moi.jpg';
   import laptop from '$lib/assets/laptop.jpg';
-  import emblaCarouselSvelte from 'embla-carousel-svelte'
-  
-  export let data;
-  let emblaApi;
-  let options = { loop: true };
-  
-  const scrollPrev = () => emblaApi.scrollPrev();
-  const scrollNext = () => emblaApi.scrollNext();
 </script>
 
 <svelte:head>
@@ -32,40 +22,6 @@
     </div>
   </div>
 </section>
-<section id="projets">
-  <div class="prose lg:prose-lg my-8 text-center max-w-full">
-    <h2 class="text-3xl">Mes projets</h2>
-    <small>Une petite sélection 👌</small>
-  </div>
-  <div class="flex items-center justify-center mb-4">
-    <button class="btn btn-square hidden md:block mr-1" on:click={scrollPrev}>❮</button>
-    <div class="embla md:border-x-2 border-base-300" use:emblaCarouselSvelte="{{ options }}">
-      <div class="embla__container">
-        {#each data.projets as projet}
-        <div class="embla__slide items-center">
-          <Projet {projet}/>
-        </div>
-        {/each}
-      </div>
-    </div>
-    <button class="btn btn-square hidden md:block ml-1" on:click={scrollNext}>❯</button>
-  </div>
-</section>
-<section id="experiences">
-  <div class="prose prose-lg my-8 text-center max-w-full">
-    <h2 class="text-3xl">Expériences</h2>
-    <small>Une liste qui ne demande qu'à grandir 🧑‍💼</small>
-  </div>
-  <ul class="relative m-8 border-l border-gray-700"> 
-    {#each data.experiences as experience}
-    <TimelineItem {experience}/>
-    {/each}
-    <li class="mb-10 ml-6">
-      <div class="absolute w-3 h-3 timeline-start bg-gray-700"></div>
-    </li>
-  </ul>
-</section>
-
 <section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
   <img src="{laptop}" alt="">
   <div class="card bg-base-100 shadow-xl p-8">
@@ -74,7 +30,8 @@
     </div>
     <div class="btn-group btn-group-vertical md:btn-group-horizontal">
       <a href="/contact" class="btn btn-primary">Contactez moi !</a>
-      <a href="/projets" class="btn btn-secondary">Mes projets</a>
+      <a href="/projets" class="btn btn-secondary">Projets</a>
+      <a href="/experiences" class="btn btn-info">Expériences</a>
     </div>
   </div>
 </section>
@@ -82,21 +39,6 @@
 <style>
   section {
     padding: 1rem;
-  }
-  
-  ul {
-    list-style-type: none;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
-  }
-  
-  .timeline-start {
-    width: 1rem;
-    height: 1rem;
-    left: -.55rem;
-    border-radius: 100%;
-    z-index: 1;
   }
   
   #cta{
@@ -119,30 +61,5 @@
   #cta .card {
     transition: transform 0.2s, box-shadow 0.2s;
     transform: perspective(1000px);
-  }
-  
-  .embla {
-    overflow: hidden;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  
-  .embla__container {
-    display: flex;
-  }
-  
-  .embla__slide {
-    flex: 0 0 auto;
-    min-width: 0;
-    margin-right: 1rem;
-    max-width: 100%;
-  }
-  
-  .embla__slide:first-child {
-    margin-left: 1rem;
-  }
-  
-  .embla__slide:last-child {
-    margin-right: 0;
   }
 </style>

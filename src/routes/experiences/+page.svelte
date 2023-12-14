@@ -1,26 +1,36 @@
 <script>
+    import TimelineItem from "$lib/components/TimelineItem.svelte";
     export let data;
 </script>
 
-<h1 class="text-2xl font-bold mb-4">Projets</h1>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {#each data.posts as post}
-    <div class="card lg:card-side bg-base-100 shadow-xl">
-        <!-- <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure> -->
-        <div class="card-body">
-            <h2 class="card-title">
-                <a href={post.path}>
-                    {post.meta.title}
-                </a>
-                <div class="badge badge-secondary">NEW</div>
-            </h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <p>Published {post.meta.date}</p>
-            <div class="card-actions justify-end">
-                <div class="badge badge-outline">SvelteKit</div> 
-            </div>
-        </div>
+<section class="p-20" id="experiences">
+    <div class="prose prose-lg my-8 text-center max-w-full">
+        <h1>Expériences</h1>
+        <small>Une liste qui ne demande qu'à grandir 🧑‍💼</small>
     </div>
-    {/each}
-</div>
+    <ul class="relative m-8 border-l border-gray-700"> 
+        {#each data.experiences as experience}
+        <TimelineItem {experience}/>
+        {/each}
+        <li class="mb-10 ml-6">
+            <div class="absolute w-3 h-3 timeline-start bg-gray-700"></div>
+        </li>
+    </ul>
+</section>
+
+<style>
+    .timeline-start {
+        width: 1rem;
+        height: 1rem;
+        left: -.55rem;
+        border-radius: 100%;
+        z-index: 1;
+    }
+    
+    ul {
+        list-style-type: none;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+</style>
