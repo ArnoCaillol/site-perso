@@ -9,7 +9,7 @@
 		</a>
 	</div>
 	<nav class="flex-none">
-		<ul class="menu menu-horizontal items-center px-1 hidden md:inline-flex">
+		<ul class="menu lg:text-lg menu-horizontal items-center px-1 hidden md:inline-flex">
 			<li><a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/">Introduction</a></li>
 			<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
 			<li><a aria-current={$page.url.pathname.startsWith('/experiences') ? 'page' : undefined} href="/experiences">Expériences</a></li>
@@ -20,8 +20,8 @@
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
 			</label>
 			<ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-			<li><a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/">Introduction</a></li>
-			<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
+				<li><a aria-current={$page.url.pathname === '/' ? 'page' : undefined} href="/">Introduction</a></li>
+				<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
 				<li><a aria-current={$page.url.pathname.startsWith('/experiences') ? 'page' : undefined} href="/experiences">Expériences</a></li>
 				<li><a aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined} href="/contact">Contact</a></li>
 			</ul>
@@ -36,10 +36,16 @@
 	}
 	
 	a[aria-current='page']::before {
-		content: '●';
-		font-size: 0.7rem;
-		padding-right: 2px;
-		color: #05d797;
+		content: '';
+		width: 15px;
+		height: 15px;
+		border-radius: 1px;
+		transform: skewX(-15deg);
+		z-index: 1;
+		overflow: hidden;
+		transition: .5s;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Initial shadow */
+		background-color: #05d797;
 		view-transition-name: active-page;
 	}
 </style>
