@@ -1,5 +1,4 @@
 <script>
-  import moi from '$lib/assets/moi.jpg';
   import laptop from '$lib/assets/laptop.jpg';
 </script>
 
@@ -8,9 +7,8 @@
 <meta property="og:title" content="Arnaud Caillol - Développeur Freelance" />
 </svelte:head>
 
-<section class="hero py-20">
-  <div class="hero-content flex-col lg:flex-row-reverse lg:mx-24">
-    <img src="{moi}" width="240" height="311" class="rounded-lg shadow-2xl sm:w-52" alt="Arnaud Caillol"/>
+<section class="hero md:my-10 shadow-xl bg-neutral md:rounded-xl w-fit mx-auto">
+  <div class="hero-content flex-col lg:flex-row-reverse">
     <div>
       <h1 class="text-center lg:text-left text-5xl font-bold">Bonjour 👋</h1>
       <p class="py-6 text-xl font-bold">Je m'appelle <strong>Arnaud CAILLOL</strong>.</p>
@@ -22,16 +20,16 @@
     </div>
   </div>
 </section>
-<section id="cta" class="flex flex-col flex-wrap justify-center content-center rounded-xl h-screen">
+<section id="cta" class="flex flex-col flex-wrap justify-center content-center h-screen shadow-xl md:my-10 md:rounded-xl">
   <img src="{laptop}" alt="">
-  <div class="card bg-base-100 shadow-xl p-8">
+  <div class="card bg-base-100 shadow-xl p-8 transition">
     <div class="prose prose-lg mb-8 text-center max-w-full">
       <h2 class="text-3xl">Une question ?</h2>
     </div>
-    <div class="btn-group btn-group-vertical md:btn-group-horizontal">
-      <a href="/contact" class="btn btn-primary">Contactez moi !</a>
-      <a href="/projets" class="btn btn-secondary">Projets</a>
-      <a href="/experiences" class="btn btn-info">Expériences</a>
+      <a href="/contact" class="btn btn-lg btn-primary mb-5">Contactez moi !</a>
+      <div class="btn-group btn-group-vertical md:btn-group-horizontal">
+      <a href="/projets" class="btn btn-lg btn-secondary">Projets</a>
+      <a href="/experiences" class="btn btn-lg btn-info">Expériences</a>
     </div>
   </div>
 </section>
@@ -58,8 +56,16 @@
     z-index: -1;
   }
   
+  #cta:hover>img { 
+    filter: blur(3px) grayscale(0);
+    transition: filter 0.5s;
+  }
+  
   #cta .card {
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: scale 0.2s, transform 0.2s, box-shadow 0.2s;
     transform: perspective(1000px);
+  }
+  #cta .card:hover {
+    scale: 1.05;
   }
 </style>

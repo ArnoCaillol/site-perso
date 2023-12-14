@@ -2,11 +2,13 @@
 	import "../app.css";
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import WAVES from 'vanta/dist/vanta.waves.min';
+	import { onMount } from "svelte";
 	import { onNavigate } from '$app/navigation';
 	
 	onNavigate((navigation) => {
 		document.documentElement.classList[navigation.delta ? 'add' : 'remove']('back-transition');
-
+		
 		if (!document.startViewTransition) return;
 		
 		return new Promise((resolve) => {
@@ -16,12 +18,35 @@
 			});
 		});
 	});
+	let vantaEffect;
+	
+	onMount(() => {
+		vantaEffect = WAVES({
+			el: "#waves",
+			mouseControls: true,
+			touchControls: true,
+			gyroControls: false,
+			scale: 1.00,
+			scaleMobile: 1.00,
+			color: 0x272935,
+			shininess: 10.00,
+			waveHeight: 10.00,
+			zoom: 1
+		})
+	});
 	export let data;
 </script>
-<Header />
 
+<svelte:head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+</svelte:head>
+
+<Header />
+<div id="waves">
+	<div id="overlay" class="backdrop-blur" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+</div>
 {#key data.currentRoute}
-<main class="container mx-auto">
+<main id="main" class="container mx-auto min-h-screen">
 	<slot />
 </main>
 {/key}
@@ -29,6 +54,15 @@
 <Footer />
 
 <style>
+	#waves {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1; /* Ensure it's behind other content */
+	}
+	
 	@keyframes fade-in {
 		from {
 			opacity: 0;

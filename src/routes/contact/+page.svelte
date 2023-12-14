@@ -29,7 +29,7 @@
 </svelte:head>
 
 <div class="flex justify-center p-20">
-    <div class="prose md:w-3/4 p-4">
+    <div class="prose lg:prose-lg md:w-3/4 p-4">
         <h1 class="text-center">Contact</h1>
         <div class="card bg-base-200 mb-4">
           <div class="card-body text-center">

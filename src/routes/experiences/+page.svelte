@@ -3,17 +3,29 @@
     export let data;
 </script>
 
-<section class="p-20" id="experiences">
-    <div class="prose prose-lg my-8 text-center max-w-full">
+
+<svelte:head>
+<title>Arnaud Caillol - Expériences</title>
+<meta property="og:title" content="Arnaud Caillol - Expériences" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</svelte:head>
+
+<section class="py-20" id="experiences">
+    <div class="prose prose-lg my-8 text-center mx-auto">
         <h1>Expériences</h1>
-        <small>Une liste qui ne demande qu'à grandir 🧑‍💼</small>
+        <div class="card bg-base-200">
+            <div class="card-body">
+                <p class="text-center">Une liste qui ne demande qu'à grandir 🧑‍💼</p>
+            </div>
+        </div>
     </div>
-    <ul class="relative m-8 border-l border-gray-700"> 
+    <ul class="relative m-8 border-l border-neutral-content"> 
         {#each data.experiences as experience}
         <TimelineItem {experience}/>
         {/each}
         <li class="mb-10 ml-6">
-            <div class="absolute w-3 h-3 timeline-start bg-gray-700"></div>
+            <div class="absolute w-3 h-3 timeline-start bg-neutral-content"></div>
         </li>
     </ul>
 </section>

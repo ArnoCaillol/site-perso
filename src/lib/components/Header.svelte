@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/assets/logo-header.png';
-	import ThemeSwitch from './ThemeSwitch.svelte'
 </script>
 <header class="sticky top-0 z-50 navbar bg-base-100 shadow-md">
 	<div class="flex-1">
@@ -13,7 +12,6 @@
 			<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
 			<li><a aria-current={$page.url.pathname.startsWith('/experiences') ? 'page' : undefined} href="/experiences">Expériences</a></li>
 			<li><a aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined} href="/contact">Contact</a></li>
-			<li><ThemeSwitch /></li>
 		</ul>
 		<div class="dropdown dropdown-end inline-block md:hidden">
 			<label tabindex="0" class="btn btn-ghost btn-square">
@@ -23,7 +21,6 @@
 				<li><a aria-current={$page.url.pathname.startsWith('/projets') ? 'page' : undefined} href="/projets">Projets</a></li>
 				<li><a aria-current={$page.url.pathname.startsWith('/experiences') ? 'page' : undefined} href="/experiences">Expériences</a></li>
 				<li><a aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined} href="/contact">Contact</a></li>
-				<li><ThemeSwitch /></li>
 			</ul>
 		</div>
 	</nav>

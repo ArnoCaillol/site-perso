@@ -50,7 +50,7 @@
 <meta property="og:title" content="Arnaud Caillol - {data.title}" />
 </svelte:head>
 
-<div class="flex mx-auto justify-center h-full">
+<div class="flex mx-auto justify-center h-full pt-20">
 	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {delayedY}px">
 		<a {href} class="btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
 	</div> 

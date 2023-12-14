@@ -12,7 +12,7 @@
 <meta property="og:title" content="Arnaud Caillol - {data.category}" />
 </svelte:head>
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center py-20">
     <div class="prose lg:prose-lg text-center w-full mb-4 p-4">
         <div class="flex justify-center space-x-4">
             <a href="/projets" class="btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
