@@ -25,7 +25,7 @@
 			el: "#waves",
 			mouseControls: true,
 			touchControls: true,
-			gyroControls: false,
+			gyroControls: true,
 			scale: 1.00,
 			scaleMobile: 1.00,
 			color: 0x272935,
@@ -36,10 +36,6 @@
 	});
 	export let data;
 </script>
-
-<svelte:head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-</svelte:head>
 
 <Header />
 <div id="waves">
