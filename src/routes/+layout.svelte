@@ -2,6 +2,7 @@
 	import "../app.css";
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import * as THREE from 'three';
 	import WAVES from 'vanta/dist/vanta.waves.min';
 	import { onMount } from "svelte";
 	import { onNavigate } from '$app/navigation';
@@ -22,6 +23,7 @@
 	onMount(() => {
 		WAVES({
 			el: "#waves",
+			THREE: THREE,
 			mouseControls: true,
 			touchControls: true,
 			gyroControls: true,
@@ -33,7 +35,7 @@
 			zoom: 1
 		})
 	});
-	
+
 	export let data;
 </script>
 
