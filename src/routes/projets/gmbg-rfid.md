@@ -3,9 +3,9 @@ title: GMBG RFID
 categories:
 - "Android"
 images:
-- "/assets/projets/gmbg-rfid/screenshot1.png"
-- "/assets/projets/gmbg-rfid/screenshot2.png"
-- "/assets/projets/gmbg-rfid/screenshot3.png"
+- "/assets/projets/gmbg-rfid/screenshot1.webp"
+- "/assets/projets/gmbg-rfid/screenshot2.webp"
+- "/assets/projets/gmbg-rfid/screenshot3.webp"
 ---
 
 ## Application Android GMBG RFID
