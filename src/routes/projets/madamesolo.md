@@ -4,9 +4,9 @@ url: https://madamesolo.com
 categories:
 - "WooCommerce"
 images:
-- "/assets/projets/madamesolo/screenshot1.png"
-- "/assets/projets/madamesolo/screenshot2.png"
-- "/assets/projets/madamesolo/screenshot3.png"
+- "/assets/projets/madamesolo/screenshot1.webp"
+- "/assets/projets/madamesolo/screenshot2.webp"
+- "/assets/projets/madamesolo/screenshot3.webp"
 ---
 
 ## Site ecommerce de madamesolo
