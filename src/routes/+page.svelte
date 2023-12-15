@@ -1,5 +1,5 @@
 <script>
-  import laptop from '$lib/assets/laptop.jpg';
+  import laptop from '$lib/assets/laptop.webp';
 </script>
 
 <svelte:head>
