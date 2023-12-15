@@ -5,8 +5,8 @@ repo: https://github.com/ArnoCaillol/papayajazz
 categories:
 - "Site vitrine"
 images:
-- "/assets/projets/papayajazz/screenshot1.png"
-- "/assets/projets/papayajazz/screenshot2.png"
+- "/assets/projets/papayajazz/screenshot1.webp"
+- "/assets/projets/papayajazz/screenshot2.webp"
 ---
 
 ## Site vitrine du groupe Papaya Jazz

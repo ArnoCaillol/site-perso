@@ -5,7 +5,7 @@ repo: https://github.com/ArnoCaillol/site-perso
 categories:
 - "Sveltekit"
 images:
-- "/assets/projets/portfolio/screenshot1.png"
+- "/assets/projets/portfolio/screenshot1.webp"
 ---
 
 ## Ce site même que vous êtes en train de consulter 😉
