@@ -32,7 +32,7 @@
 			color: 0x272935,
 			shininess: 10.00,
 			waveHeight: 20.00,
-			zoom: 1
+			zoom: 1.8
 		})
 	});
 
