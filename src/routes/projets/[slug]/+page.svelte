@@ -50,7 +50,7 @@
 <meta property="og:title" content="Arnaud Caillol - {data.title}" />
 </svelte:head>
 
-<div class="flex mx-auto justify-center h-full pt-20">
+<div class="flex mx-auto justify-center w-fit h-full my-20 pt-4 md:px-4 backdrop-blur-xl md:rounded-xl shadow-xl">
 	<div class="divider divider-horizontal hidden md:flex" style="margin-top: {delayedY}px">
 		<a {href} class="btn btn-primary bg-[#05d797] back" on:click={(btn) => loadingSpinner(btn)}>❮</a>
 	</div> 
@@ -61,10 +61,10 @@
 				<h1 class="mb-2 projet-header">{data.title}</h1>
 			</div>
 			{#if data.url}
-			<a href={data.url} class="link mb-2">{data.url}</a>
+			<a href={data.url} class="link text-center mb-2">{data.url}</a>
 			{/if}
 			{#if data.repo}
-			<a href={data.repo} class="link mb-2">Code source</a>
+			<a href={data.repo} class="link text-center mb-2">Code source</a>
 			{/if}
 			{#each data.categories as category}
 			<a href="/projets/category/{slugify(category, slugifyParams)}" class="btn">{category}</a>
